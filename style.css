@@ -1,0 +1,228 @@
+/* Kakesu LP。トークンは docs/DESIGN.md が正本。
+   瑠璃 #1965ac ＝操作できるもの / 赤茶 #bc6b46 ＝状態の印。この役割分担を崩さない */
+:root {
+  --accent: #1965ac;
+  --accent-soft: #e8f0f8;
+  --accent-ink: #175a94;
+  --unread: #bc6b46;
+  --bg: #efe9de;
+  --card: #ffffff;
+  --line: #e4ded4;
+  --ink: #1b1815;
+  --ink2: #6b6560;
+  --ink3: #8d867e;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #6aaee8;
+    --accent-soft: #1c2a36;
+    --accent-ink: #9cc9f0;
+    --unread: #d9906b;
+    --bg: #161412;
+    --card: #1f1d1a;
+    --line: #2e2a26;
+    --ink: #f0ede8;
+    --ink2: #a8a29a;
+    --ink3: #7a746c;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  /* Web フォントを入れない。システムフォント（SF Pro ＋ ヒラギノ） */
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  line-height: 1.75;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 42rem; margin: 0 auto; padding: 0 1.25rem; }
+
+.page-header { padding: 3rem 0 2.5rem; text-align: center; }
+.page-header h1 { font-size: 2.5rem; margin: 0 0 .25rem; letter-spacing: .02em; }
+.page-header .lede { font-size: 1.25rem; color: var(--ink); margin: 0; line-height: 1.6; }
+
+h2 { font-size: 1.15rem; margin: 2.5rem 0 .75rem; }
+p { margin: 0 0 1rem; }
+a { color: var(--accent); }
+
+/* 背景とカードの明度差は 1.2:1 しかない。面の分離は 1px の罫線に持たせる */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+.card h3 { margin: 0 0 .35rem; font-size: 1rem; }
+.card p { margin: 0; color: var(--ink2); }
+
+ul { padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+
+.tag {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-radius: 999px;
+  padding: .2rem .7rem;
+  font-size: .85rem;
+  margin: 0 .3rem .5rem 0;
+}
+
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink3);   /* 3.59:1。メタ情報専用で、本文には使わない */
+  font-size: .85rem;
+  text-align: center;
+}
+footer a { color: var(--ink2); }
+
+.back { display: inline-block; margin-bottom: 1rem; font-size: .9rem; }
+
+/* アプリアイコン。角丸は iOS のスクイーカル比（22.37%）に寄せる。
+   アイコン自体が瑠璃なので、背景との境目は罫線で作る */
+.appicon {
+  width: 112px;
+  height: 112px;
+  border-radius: 25px;
+  border: 1px solid var(--line);
+  margin-bottom: 1rem;
+}
+
+/* 何のアプリかを言う一行。lede より小さく、補足として置く */
+.page-header .sub { color: var(--ink2); margin: .4rem 0 1.25rem; }
+
+/* --- サイト共通のヘッダー・フッター --- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+}
+.site-header .inner {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: .7rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+}
+.site-header .brand {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.site-header .brand img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  border: 1px solid var(--line);
+  display: block;
+}
+.site-header nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem .9rem;
+  font-size: .9rem;
+  justify-content: flex-end;
+}
+.site-header nav a { text-decoration: none; }
+/* 今いるページは操作先ではないので、瑠璃を使わない */
+.site-header nav a[aria-current="page"] { color: var(--ink2); font-weight: 600; }
+
+.site-footer {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+/* **詰める。** ここは出口の案内で、読ませたい中身ではない */
+.site-footer .inner {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: .9rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem 1rem;
+  font-size: .8rem;
+}
+.site-footer nav { display: flex; flex-wrap: wrap; gap: .9rem; }
+.site-footer nav a { color: var(--ink2); }
+.site-footer .copy { margin: 0 0 0 auto; color: var(--ink3); }
+
+@media (max-width: 26rem) {
+  .site-header nav { gap: .75rem; font-size: .85rem; }
+  .site-header .brand { font-size: 1rem; }
+}
+
+/* --- 操作画像 --- */
+.shots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.25rem 0 2rem;
+}
+.shots figure { margin: 0; max-width: 210px; flex: 1 1 190px; }
+.shots img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+.shots figcaption {
+  font-size: .8rem;
+  color: var(--ink2);
+  margin-top: .55rem;
+  line-height: 1.55;
+}
+
+/* --- 機能一覧の表 --- */
+.features {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .75rem 0 2rem;
+  font-size: .95rem;
+}
+.features th, .features td {
+  text-align: left;
+  vertical-align: top;
+  padding: .7rem .5rem;
+  border-bottom: 1px solid var(--line);
+}
+.features th { width: 12rem; font-weight: 600; }
+.features td { color: var(--ink2); }
+/* 狭い画面では2列に割ると読めない。積む */
+@media (max-width: 34rem) {
+  .features th, .features td { display: block; width: auto; border-bottom: none; padding: 0 .25rem; }
+  .features th { padding-top: .8rem; }
+  .features td { padding-bottom: .8rem; border-bottom: 1px solid var(--line); }
+}
+
+code {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  padding: .1rem .35rem;
+  border-radius: 5px;
+  font-size: .9em;
+}
+
+/* 機能名から使い方へ飛べる。**押せるので瑠璃**（下線は表の中でうるさいので出さない） */
+.features th a { text-decoration: none; }
+.features th a:hover { text-decoration: underline; }
+/* ヘッダーが被らないように、飛び先を少し下げる */
+[id] { scroll-margin-top: 1.5rem; }
+
+.updated {
+  margin-top: 2.5rem;
+  font-size: .8rem;
+  color: var(--ink3);   /* 3.59:1。メタ情報専用 */
+}

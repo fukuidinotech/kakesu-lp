@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>機能一覧 — Kakesu</title>
+<meta name="description" content="Kakesu の機能一覧。保存、検索、タグ、メモ、未読、お気に入り、並べ替え、ミュート、iCloud 同期、JSON の控え。">
+<link rel="icon" href="icon-512.png">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="features.html" aria-current="page">機能</a>
+      <a href="guide.html">使い方</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>機能一覧</h1>
+  <p class="lede">Kakesu</p>
+</header>
+
+<h2>保存する</h2>
+<table class="features">
+  <tr><th><a href="guide.html#save">共有シートから保存</a></th><td>Safari などの共有ボタンから。押した瞬間に保存が終わります。</td></tr>
+  <tr><th><a href="guide.html#save">コピーしたURLを貼り付け</a></th><td>一覧の右上のボタンから。</td></tr>
+  <tr><th><a href="guide.html#save">タイトルの後追い取得</a></th><td>保存のあとで、ページのタイトルを取りに行きます。</td></tr>
+  <tr><th><a href="guide.html#save">サムネイルの後追い取得</a></th><td>ページの画像（og:image）を取れたときだけ表示します。</td></tr>
+  <tr><th>ファビコンの表示</th><td>どのサイトのものか、一覧で見分けられます。</td></tr>
+  <tr><th>公開日の表示</th><td>記事に公開日があれば出します。保存日では代用しません。</td></tr>
+  <tr><th><a href="guide.html#save">重複の判定</a></th><td>追跡用パラメータや <code>www.</code> の違いを無視して、同じページと判断します。</td></tr>
+</table>
+
+<h2>掘り出す</h2>
+<table class="features">
+  <tr><th><a href="guide.html#find">検索</a></th><td>タイトル・URL・タグ・メモをまとめて探します。</td></tr>
+  <tr><th><a href="guide.html#find">検索履歴</a></th><td>確定した検索語を5件まで候補に出します。</td></tr>
+  <tr><th><a href="guide.html#find">タグで絞り込み</a></th><td>一覧の上のタグを押すと、そのタグだけになります。</td></tr>
+  <tr><th><a href="guide.html#find">タブ</a></th><td>すべて / お気に入り / 未読。選んだ状態は次に開いても残ります。</td></tr>
+  <tr><th><a href="guide.html#find">未読の印</a></th><td>開くと既読になります。編集画面で戻すこともできます。</td></tr>
+  <tr><th><a href="guide.html#find">お気に入り</a></th><td>長押しメニューか、右スワイプで。</td></tr>
+</table>
+
+<h2>整える</h2>
+<table class="features">
+  <tr><th><a href="guide.html#edit">タイトルの編集</a></th><td>取得に失敗したときや、変なタイトルを掴んだときに直せます。</td></tr>
+  <tr><th><a href="guide.html#edit">タグ</a></th><td>いくつでも。過去に使ったタグが候補に出ます。大文字と小文字は同じ扱いです。</td></tr>
+  <tr><th><a href="guide.html#hide">タグの名前変更・削除</a></th><td>設定から、全項目のタグをまとめて付け替えられます。</td></tr>
+  <tr><th><a href="guide.html#edit">メモ</a></th><td>なぜ保存したのかを書いておけます。検索の対象になります。</td></tr>
+  <tr><th><a href="guide.html#edit">並べ替え</a></th><td>指でドラッグ。全件を表示しているときだけできます。</td></tr>
+  <tr><th><a href="guide.html#edit">取り直す</a></th><td>タイトルを取れなかった項目を、もう一度取りに行かせます。</td></tr>
+  <tr><th><a href="guide.html#edit">サムネイルの個別切替</a></th><td>この項目だけ画像を消す、ということができます。</td></tr>
+</table>
+
+<h2>開く</h2>
+<table class="features">
+  <tr><th><a href="guide.html#open">アプリ内で開く</a></th><td>タップで開き、閉じると一覧の同じ場所に戻ります。</td></tr>
+  <tr><th><a href="guide.html#open">ブラウザで開く</a></th><td>ログインや拡張機能が要るページは、長押しメニューから Safari へ。</td></tr>
+</table>
+
+<h2>消す・隠す</h2>
+<table class="features">
+  <tr><th><a href="guide.html#hide">削除の取り消し</a></th><td>消した直後に「元に戻す」が数秒出ます。押さなければ、そこで初めて消えます。</td></tr>
+  <tr><th><a href="guide.html#hide">文字列でミュート</a></th><td>URL やタイトルに含まれる文字列を登録して隠します。</td></tr>
+  <tr><th><a href="guide.html#hide">タグでミュート</a></th><td>そのタグが付いた項目を隠します。</td></tr>
+  <tr><th><a href="guide.html#hide">登録を残したままオフ</a></th><td>ミュートは消さずに切れます。一時的に外したいときのために。</td></tr>
+  <tr><th><a href="guide.html#hide">隠している件数の表示</a></th><td>一覧の下に出ます。押すとミュートの設定へ飛べます。</td></tr>
+</table>
+
+<h2>持ち運ぶ・控える</h2>
+<table class="features">
+  <tr><th><a href="guide.html#sync">iCloud 同期</a></th><td>同じ Apple アカウントの端末に出てきます。アカウント登録の操作はありません。</td></tr>
+  <tr><th><a href="guide.html#backup">週1の自動控え</a></th><td>全件を JSON にして iCloud Drive の Kakesu フォルダに置きます。</td></tr>
+  <tr><th><a href="guide.html#backup">書き出し</a></th><td>いつでも JSON を書き出せます。送り先はご自身で選びます。</td></tr>
+  <tr><th><a href="guide.html#backup">読み込み</a></th><td>JSON から戻せます。すでにある URL は飛ばし、上書きしません。</td></tr>
+</table>
+
+<h2>のぞき見を防ぐ</h2>
+<table class="features">
+  <tr><th><a href="guide.html#lock">アプリのロック</a></th><td>開くときに Face ID / Touch ID、または端末のパスコードで確認します。既定はオフです。</td></tr>
+  <tr><th><a href="guide.html#lock">戻ったときの猶予</a></th><td>リンクを開いて戻ってきただけでは聞きません。1分以上離れていたときだけ確認します。</td></tr>
+  <tr><th><a href="guide.html#lock">App Switcher の覆い</a></th><td>アプリを切り替える画面に、一覧の中身が写り込まないようにします。</td></tr>
+</table>
+
+<h2>そのほか</h2>
+<table class="features">
+  <tr><th>ダークモード</th><td>iOS の設定に従います。</td></tr>
+  <tr><th>文字サイズ</th><td>iOS の文字サイズ設定に追従します。</td></tr>
+  <tr><th>対応言語</th><td>日本語・英語・ドイツ語・フランス語・スペイン語・韓国語・中国語（簡体字／繁体字）。</td></tr>
+  <tr><th>対応OS</th><td>iOS 17.0 以降。</td></tr>
+</table>
+
+<p>
+くわしい操作は<a href="guide.html">使い方</a>を、データの扱いは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。
+</p>
+
+</div>
+
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="features.html">機能一覧</a>
+      <a href="guide.html">使い方</a>
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+</body>
+</html>

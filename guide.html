@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使い方 — Kakesu</title>
+<meta name="description" content="Kakesu の使い方。保存する、見つける、開く、整える、隠す、控えを取る。">
+<link rel="icon" href="icon-512.png">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="features.html">機能</a>
+      <a href="guide.html" aria-current="page">使い方</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>使い方</h1>
+  <p class="lede">Kakesu</p>
+</header>
+
+<h2 id="save">1. 保存する</h2>
+<p>入口は2つあります。どちらも押した瞬間に保存が終わります。</p>
+<div class="card">
+  <h3>共有シートから</h3>
+  <p>
+    Safari などでページを開き、共有ボタン → <strong>Kakesu</strong> を選びます。
+    一覧に出てこないときは、共有シートの「その他」から Kakesu をオンにしてください。
+  </p>
+</div>
+<div class="card">
+  <h3>コピーしたURLを貼り付け</h3>
+  <p>
+    URL をコピーした状態でアプリを開き、<strong>右上の貼り付けボタン</strong>を押します。
+  </p>
+</div>
+<p>
+  <strong>タイトルとサムネイルは、あとから埋まります。</strong>
+  保存した直後は URL だけが並びますが、アプリを開いているあいだに順次取りに行きます。
+  電波の悪い場所で保存しても、保存そのものは失敗しません。
+</p>
+<p>
+  同じページを二度保存しても、増えません
+  （<code>?utm_source=</code> のような追跡用のパラメータや <code>www.</code> の違いは無視して、同じページと判断します）。
+</p>
+
+<h2 id="find">2. 見つける</h2>
+<ul>
+  <li><strong>検索</strong> — タイトル・URL・タグ・メモをまとめて探します。確定した検索語は5件まで候補に残ります。</li>
+  <li><strong>タグで絞る</strong> — 一覧の上のタグを押すと、そのタグだけになります。もう一度押すと解除。</li>
+  <li><strong>タブで分ける</strong> — すべて / お気に入り / 未読。選んだ状態は次に開いたときも残ります。</li>
+</ul>
+<p>
+  未読は<strong>丸い印</strong>、お気に入りは<strong>星</strong>で見分けます。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="shots/01-list.png" alt="一覧。上のタブで すべて / お気に入り / 未読 を切り替え、その下のタグで絞り込みます。丸い印が未読です。" loading="lazy">
+    <figcaption>一覧。上のタブで すべて / お気に入り / 未読 を切り替え、その下のタグで絞り込みます。丸い印が未読です。</figcaption>
+  </figure>
+</div>
+
+<h2 id="open">3. 開く</h2>
+<div class="card">
+  <h3>タップ</h3>
+  <p>アプリの中で開きます。読み終えて閉じると、一覧の同じ場所に戻ります。開いた時点で既読になります。</p>
+</div>
+<div class="card">
+  <h3>長押し → ブラウザで開く</h3>
+  <p>ログインが必要なページや、拡張機能を使いたいページはこちらから Safari に渡します。</p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="shots/02-menu.png" alt="長押しで出るメニュー。編集・お気に入り・並べ替え・ブラウザで開く・取り直す・削除。" loading="lazy">
+    <figcaption>長押しで出るメニュー。編集・お気に入り・並べ替え・ブラウザで開く・取り直す・削除。</figcaption>
+  </figure>
+</div>
+
+<h2 id="edit">4. 整える</h2>
+<p><strong>長押し → 編集</strong>で、タイトル・タグ・メモ・未読を直せます。</p>
+<ul>
+  <li><strong>タイトル</strong> — 取得に失敗したときや、変なタイトルを掴んだときはここで直します。</li>
+  <li><strong>タグ</strong> — 入力して追加。過去に使ったタグは候補に出ます。大文字と小文字は同じものとして扱います。</li>
+  <li><strong>メモ</strong> — なぜ保存したのかを一行書いておくと、あとで効きます。</li>
+  <li><strong>サムネイル</strong> — この項目だけ画像を消す、ということもできます。</li>
+</ul>
+<p>
+  <strong>並べ替え</strong>は、長押し → 並べ替え → 指でドラッグ。
+  絞り込みや検索をしている最中は並べ替えできません（見えている一部だけ動かすと、全体の順番が壊れるためです）。
+</p>
+<p>
+  タイトルが取れなかった項目は、<strong>長押し → 取り直す</strong>でもう一度取りに行きます。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="shots/03-edit.png" alt="編集画面。タイトルを直し、タグを足し、メモを書きます。過去に使ったタグは候補に出ます。" loading="lazy">
+    <figcaption>編集画面。タイトルを直し、タグを足し、メモを書きます。過去に使ったタグは候補に出ます。</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/04-reorder.png" alt="並べ替え中。右端の取っ手を持ってドラッグします。" loading="lazy">
+    <figcaption>並べ替え中。右端の取っ手を持ってドラッグします。</figcaption>
+  </figure>
+</div>
+
+<h2 id="hide">5. 消す・隠す</h2>
+<div class="card">
+  <h3>消す</h3>
+  <p>
+    左にスワイプ、または長押し → 削除。
+    <strong>消した直後に「元に戻す」が数秒だけ出ます。</strong>
+    押せば戻ります。押さなければ、そこで初めて消えます。
+  </p>
+</div>
+<div class="card">
+  <h3>隠す（ミュート）</h3>
+  <p>
+    設定 → ミュート。<strong>URL やタイトルに含まれる文字列</strong>を登録すると、
+    それに当たるものが一覧から消えます。タグ単位で隠すこともできます。
+    どちらも<strong>登録は残したまま、オンとオフを切り替えられます。</strong>
+  </p>
+</div>
+<p>
+  隠している件数は一覧の下に出ます。押すとミュートの設定に飛べます。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="shots/05-undo.png" alt="消した直後。「元に戻す」が数秒だけ出ます。押さなければ、そこで初めて消えます。" loading="lazy">
+    <figcaption>消した直後。「元に戻す」が数秒だけ出ます。押さなければ、そこで初めて消えます。</figcaption>
+  </figure>
+  <figure>
+    <img src="shots/07-mute.png" alt="ミュートの設定。URL やタイトルの文字列と、タグ単位。登録を残したままオフにできます。" loading="lazy">
+    <figcaption>ミュートの設定。URL やタイトルの文字列と、タグ単位。登録を残したままオフにできます。</figcaption>
+  </figure>
+</div>
+
+<h2 id="backup">6. 控えを取る</h2>
+<p>
+  週に一度、保存した全件を JSON にして iCloud Drive の <strong>Kakesu フォルダ</strong>に置きます。
+  「ファイル」アプリから開けますし、アプリを消したあとも残ります。
+</p>
+<p>
+  設定からは、いつでも<strong>書き出し</strong>（送り先はご自身で選びます）と、
+  <strong>読み込み</strong>ができます。読み込みでは、すでにある URL は飛ばして、無いものだけ足します。
+  上書きはしません。
+</p>
+
+<h2 id="lock">7. のぞき見を防ぐ</h2>
+<p>
+  保存した URL は閲覧履歴そのものです。
+  端末を人に渡すことがあるなら、<strong>設定 → アプリのロック</strong>をオンにしてください。
+  アプリを開くときに Face ID / Touch ID、または端末のパスコードで確認します。
+</p>
+<ul>
+  <li><strong>既定はオフです。</strong> 必要な方だけ使ってください。</li>
+  <li>
+    <strong>リンクを開いて戻っただけでは聞きません。</strong>
+    1分以上アプリを離れていたときだけ確認します。
+    読むたびに Face ID が出ると使えたものではないためです。
+  </li>
+  <li>
+    顔や指紋が通らないときは、<strong>端末のパスコードでも開けます。</strong>
+    生体認証だけにすると、自分を締め出してしまうためです。
+  </li>
+  <li>アプリを切り替える画面には、一覧の中身が写らないようにしています。</li>
+</ul>
+<p>
+  端末にパスコードを設定していない場合、この機能は使えません（設定の項目が押せなくなります）。
+</p>
+<p>
+  <strong>共有シートからの保存には、ロックは掛かりません。</strong>
+  保存の前に確認を挟むと、放り込んだつもりのものを取りこぼすためです。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="shots/06-settings.png" alt="設定のセキュリティ。アプリロックは既定でオフです。オンにすると、開くときに確認します。" loading="lazy">
+    <figcaption>設定のセキュリティ。アプリロックは既定でオフです。オンにすると、開くときに確認します。</figcaption>
+  </figure>
+</div>
+
+<h2 id="sync">別の端末で続きを読む</h2>
+<p>
+  同じ Apple アカウントでサインインしていれば、そのまま出てきます。
+  アカウントを作る操作はありません。同期を止めたいときは、
+  iOS の「設定」→ Apple アカウント → iCloud から Kakesu をオフにしてください。
+</p>
+
+<h2 id="trouble">うまくいかないとき</h2>
+<ul>
+  <li><strong>共有シートに出てこない</strong> — 共有シートの「その他」から Kakesu をオンにしてください。</li>
+  <li><strong>タイトルが URL のまま</strong> — JavaScript で描画するページはタイトルを取れないことがあります。編集画面で直すか、取り直しを試してください。</li>
+  <li><strong>別の端末に出てこない</strong> — 設定の iCloud の状態を見てください。サインインしていない場合はそこに出ます。</li>
+</ul>
+
+<h2>お問い合わせ</h2>
+<p>
+  ここに書かれていないことは<a href="contact.html">お問い合わせのページ</a>からどうぞ。
+</p>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="features.html">機能一覧</a>
+      <a href="guide.html">使い方</a>
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+</body>
+</html>
