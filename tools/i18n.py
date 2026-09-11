@@ -13,6 +13,7 @@
 """
 from __future__ import annotations
 
+import hashlib
 import pathlib
 import re
 import sys
@@ -99,6 +100,28 @@ def asset(lang: str, name: str) -> str:
     return f"../{name}" if LANGS[lang]["dir"] else name
 
 
+_css_version: str | None = None
+
+
+def css_version() -> str:
+    """`style.css` の中身から作る短い印。**手で上げない。**
+
+    HTML と CSS は別々にキャッシュされる。GitHub Pages は両方に `max-age=600` を付けるので、
+    CSS を変えた直後は「新しい HTML ＋ 古い CSS」で見る人が出る。
+    markup はあるのにそれを整える規則が無い、という壊れ方をして、
+    言語切替が素の箇条書きになって縦に伸びた（2026-09-11 に実際に起きた）。
+
+    URL に中身の印を入れておけば、CSS を直した時点で URL も変わるので必ず取り直しになる。
+    **中身から導出しているので上げ忘れが起きない。**
+    CSS を直して書き戻しを忘れたら `--check` が落ちる（`/lp-sync` の L9）
+    """
+    global _css_version
+    if _css_version is None:
+        data = (ROOT / "style.css").read_bytes()
+        _css_version = hashlib.sha256(data).hexdigest()[:8]
+    return _css_version
+
+
 def block_alt(lang: str, page: str) -> str:
     lines = [f'<link rel="canonical" href="{url_for(lang, page)}">']
     for other in LANGS:
@@ -107,7 +130,8 @@ def block_alt(lang: str, page: str) -> str:
     lines.append(f'<link rel="alternate" hreflang="x-default" href="{url_for("en", page)}">')
     lines.append(f'<link rel="icon" href="{asset(lang, "icon-512.png")}">')
     lines.append(f'<link rel="apple-touch-icon" href="{asset(lang, "icon-512.png")}">')
-    lines.append(f'<link rel="stylesheet" href="{asset(lang, "style.css")}">')
+    lines.append(
+        f'<link rel="stylesheet" href="{asset(lang, "style.css")}?v={css_version()}">')
     return "\n".join(lines)
 
 
