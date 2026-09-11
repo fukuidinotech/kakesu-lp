@@ -216,9 +216,20 @@ code {
   font-size: .9em;
 }
 
-/* 機能名から使い方へ飛べる。**押せるので瑠璃**（下線は表の中でうるさいので出さない） */
-.features th a { text-decoration: none; }
-.features th a:hover { text-decoration: underline; }
+/* **機能名にはリンクを貼らない。** 同じ節へ 35 本も貼ると縦一列が青で埋まり、
+   瑠璃＝操作できるもの、という印が密度で意味を失う。飛び先は節の見出しに1本だけ置く */
+.sec-link {
+  font-size: .85rem;
+  font-weight: 400;
+  margin-left: .6rem;
+  white-space: nowrap;
+}
+/* 節と飛び先が違う行にだけ、説明の末尾へ添える */
+.row-link {
+  font-size: .85rem;
+  margin-left: .4rem;
+  white-space: nowrap;
+}
 /* ヘッダーが被らないように、飛び先を少し下げる */
 [id] { scroll-margin-top: 1.5rem; }
 
