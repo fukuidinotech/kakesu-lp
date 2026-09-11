@@ -19,7 +19,8 @@
 kakesu-lp/
 ├── index.html features.html guide.html terms.html privacy.html contact.html   ← ja
 ├── en/ de/ fr/ es/ ko/ zh-Hans/ zh-Hant/   ← 各6ページ（同じファイル名）
-├── style.css  icon-512.png  shots/         ← 全言語で共有（1つだけ置く）
+├── style.css  icon-512.png                 ← 全言語で共有（1つだけ置く）
+├── shots/<言語>/                           ← 操作画像は言語ごと（ja も shots/ja/）
 └── tools/i18n.py                           ← 共通部分の正本
 ```
 

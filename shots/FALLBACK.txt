@@ -1,0 +1,3 @@
+# 英語版で代替した操作画像。make guide-shots が書く。手で編集しない。
+# その言語では撮れなかった画面（多くは Apple Intelligence 非対応の「聞く」）。
+de/08-ask.png
