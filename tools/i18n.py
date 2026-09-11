@@ -155,23 +155,30 @@ def block_route() -> str:
         '<script>\n'
         '/* 言語の自動振り分け。JS が無ければ日本語のまま出て、右上の言語切替で選べる */\n'
         '(function(){try{\n'
+        '  /* **行き先は必ずこの表から選ぶ。** ?lang= も localStorage も外から書ける値なので、\n'
+        '     そのまま URL に繋ぐと "https://..." や "javascript:..." を入れられる */\n'
+        "  var OK={ja:1,en:1,de:1,fr:1,es:1,ko:1,'zh-Hans':1,'zh-Hant':1};\n"
+        "  var PAGE={'index.html':1,'features.html':1,'guide.html':1,\n"
+        "            'terms.html':1,'privacy.html':1,'contact.html':1};\n"
         "  var q=new URLSearchParams(location.search).get('lang');\n"
-        "  if(q){try{localStorage.setItem('kakesu-lang',q)}catch(e){}return}\n"
+        "  if(q){if(OK[q]){try{localStorage.setItem('kakesu-lang',q)}catch(e){}}return}\n"
         "  if(document.documentElement.lang!=='ja')return;  /* 飛ばすのは ja のページだけ */\n"
         '  var pick=null;\n'
         "  try{pick=localStorage.getItem('kakesu-lang')}catch(e){}\n"
+        '  if(pick&&!OK[pick])pick=null;  /* 表に無いものは捨てる（古い値・細工された値） */\n'
         '  if(!pick){\n'
-        "    var dirs={en:1,de:1,fr:1,es:1,ko:1},l=navigator.languages||[navigator.language||''];\n"
+        "    var l=navigator.languages||[navigator.language||''];\n"
         '    for(var i=0;i<l.length&&!pick;i++){\n'
-        "      var t=String(l[i]).toLowerCase();\n"
-        "      if(t.indexOf('ja')===0)pick='ja';\n"
-        "      else if(t.indexOf('zh')===0)pick=/hant|tw|hk|mo/.test(t)?'zh-Hant':'zh-Hans';\n"
-        "      else if(dirs[t.split('-')[0]])pick=t.split('-')[0];\n"
+        "      var t=String(l[i]).toLowerCase(),b=t.split('-')[0];\n"
+        "      if(b==='ja')pick='ja';\n"
+        "      else if(b==='zh')pick=/hant|tw|hk|mo/.test(t)?'zh-Hant':'zh-Hans';\n"
+        "      else if(OK[b])pick=b;\n"
         '    }\n'
         "    if(!pick)pick='en';  /* hreflang の x-default と同じ */\n"
         '  }\n'
         "  if(pick==='ja')return;\n"
-        "  var page=location.pathname.split('/').pop()||'index.html';\n"
+        "  var page=location.pathname.split('/').pop();\n"
+        "  if(!PAGE[page])page='index.html';\n"
         "  location.replace(pick+'/'+page+location.hash);  /* 戻るで戻れるよう replace */\n"
         '}catch(e){}})();\n'
         '</script>'
