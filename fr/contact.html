@@ -19,6 +19,29 @@
 <link rel="icon" href="../icon-512.png">
 <link rel="apple-touch-icon" href="../icon-512.png">
 <link rel="stylesheet" href="../style.css?v=79b530b7">
+<script>
+/* 言語の自動振り分け。JS が無ければ日本語のまま出て、右上の言語切替で選べる */
+(function(){try{
+  var q=new URLSearchParams(location.search).get('lang');
+  if(q){try{localStorage.setItem('kakesu-lang',q)}catch(e){}return}
+  if(document.documentElement.lang!=='ja')return;  /* 飛ばすのは ja のページだけ */
+  var pick=null;
+  try{pick=localStorage.getItem('kakesu-lang')}catch(e){}
+  if(!pick){
+    var dirs={en:1,de:1,fr:1,es:1,ko:1},l=navigator.languages||[navigator.language||''];
+    for(var i=0;i<l.length&&!pick;i++){
+      var t=String(l[i]).toLowerCase();
+      if(t.indexOf('ja')===0)pick='ja';
+      else if(t.indexOf('zh')===0)pick=/hant|tw|hk|mo/.test(t)?'zh-Hant':'zh-Hans';
+      else if(dirs[t.split('-')[0]])pick=t.split('-')[0];
+    }
+    if(!pick)pick='en';  /* hreflang の x-default と同じ */
+  }
+  if(pick==='ja')return;
+  var page=location.pathname.split('/').pop()||'index.html';
+  location.replace(pick+'/'+page+location.hash);  /* 戻るで戻れるよう replace */
+}catch(e){}})();
+</script>
 <!--/chrome:alt-->
 </head>
 <body>
@@ -38,14 +61,14 @@
     <details class="langpick">
       <summary aria-label="Choisir la langue">Français</summary>
       <ul>
-        <li><a lang="ja" hreflang="ja" href="../contact.html">日本語</a></li>
-        <li><a lang="en" hreflang="en" href="../en/contact.html">English</a></li>
-        <li><a lang="de" hreflang="de" href="../de/contact.html">Deutsch</a></li>
-        <li><a lang="fr" hreflang="fr" href="contact.html" aria-current="true">Français</a></li>
-        <li><a lang="es" hreflang="es" href="../es/contact.html">Español</a></li>
-        <li><a lang="ko" hreflang="ko" href="../ko/contact.html">한국어</a></li>
-        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/contact.html">简体中文</a></li>
-        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/contact.html">繁體中文</a></li>
+        <li><a lang="ja" hreflang="ja" href="../contact.html?lang=ja">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/contact.html?lang=en">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/contact.html?lang=de">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="contact.html?lang=fr" aria-current="true">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/contact.html?lang=es">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/contact.html?lang=ko">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/contact.html?lang=zh-Hans">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/contact.html?lang=zh-Hant">繁體中文</a></li>
       </ul>
     </details>
   </div>

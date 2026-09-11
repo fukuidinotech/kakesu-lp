@@ -132,7 +132,50 @@ def block_alt(lang: str, page: str) -> str:
     lines.append(f'<link rel="apple-touch-icon" href="{asset(lang, "icon-512.png")}">')
     lines.append(
         f'<link rel="stylesheet" href="{asset(lang, "style.css")}?v={css_version()}">')
+    lines.append(block_route())
     return "\n".join(lines)
+
+
+# **この LP で唯一の JavaScript。**
+#
+# 静的配信なのでサーバ側で `Accept-Language` を見られない。ja を直下に置いている以上、
+# ルート URL をそのまま踏んだ人には日本語が出る（SNS で共有されたリンク、直打ち）。
+# App Store とアプリからの導線は言語別 URL を指しているので届かないのはここだけだが、
+# 英語圏の人に日本語を出して終わる経路が1本残るのは具合が悪い。
+#
+# **止めたいときはこの関数が返す文字列を空にして `python3 tools/i18n.py` を流す。**
+# それだけで全ページから消える（HTML を手で直す必要はない）。
+#
+# 検索エンジンへの影響: Google は言語による自動転送を勧めていない。
+# hreflang は全ページに入れてあるので索引付けの手がかりは残るが、
+# ja のページが英語版として扱われる可能性は残る。
+# この LP の主な入口は App Store なので、その不利より取りこぼしを減らすほうを採った。
+def block_route() -> str:
+    return (
+        '<script>\n'
+        '/* 言語の自動振り分け。JS が無ければ日本語のまま出て、右上の言語切替で選べる */\n'
+        '(function(){try{\n'
+        "  var q=new URLSearchParams(location.search).get('lang');\n"
+        "  if(q){try{localStorage.setItem('kakesu-lang',q)}catch(e){}return}\n"
+        "  if(document.documentElement.lang!=='ja')return;  /* 飛ばすのは ja のページだけ */\n"
+        '  var pick=null;\n'
+        "  try{pick=localStorage.getItem('kakesu-lang')}catch(e){}\n"
+        '  if(!pick){\n'
+        "    var dirs={en:1,de:1,fr:1,es:1,ko:1},l=navigator.languages||[navigator.language||''];\n"
+        '    for(var i=0;i<l.length&&!pick;i++){\n'
+        "      var t=String(l[i]).toLowerCase();\n"
+        "      if(t.indexOf('ja')===0)pick='ja';\n"
+        "      else if(t.indexOf('zh')===0)pick=/hant|tw|hk|mo/.test(t)?'zh-Hant':'zh-Hans';\n"
+        "      else if(dirs[t.split('-')[0]])pick=t.split('-')[0];\n"
+        '    }\n'
+        "    if(!pick)pick='en';  /* hreflang の x-default と同じ */\n"
+        '  }\n'
+        "  if(pick==='ja')return;\n"
+        "  var page=location.pathname.split('/').pop()||'index.html';\n"
+        "  location.replace(pick+'/'+page+location.hash);  /* 戻るで戻れるよう replace */\n"
+        '}catch(e){}})();\n'
+        '</script>'
+    )
 
 
 def block_head(lang: str, page: str) -> str:
@@ -151,8 +194,10 @@ def block_head(lang: str, page: str) -> str:
     out.append('      <ul>')
     for other, ocfg in LANGS.items():
         cur = ' aria-current="true"' if other == lang else ""
+        # **`?lang=` は自動振り分けを黙らせるための印。**
+        # 自分で選んだ言語は覚えて、次からは勝手に飛ばさない（`block_route`）
         out.append(f'        <li><a lang="{other}" hreflang="{other}" '
-                   f'href="{rel(lang, other, page)}"{cur}>{ocfg["native"]}</a></li>')
+                   f'href="{rel(lang, other, page)}?lang={other}"{cur}>{ocfg["native"]}</a></li>')
     out.append('      </ul>')
     out.append('    </details>')
     out.append('  </div>')
