@@ -19,38 +19,6 @@
 <link rel="icon" href="../icon-512.png">
 <link rel="apple-touch-icon" href="../icon-512.png">
 <link rel="stylesheet" href="../style.css?v=79b530b7">
-<script>
-/* 言語の自動振り分け。JS が無ければ日本語のまま出て、右上の言語切替で選べる */
-(function(){try{
-  /* **行き先は必ずこの表から選ぶ。** ?lang= も localStorage も外から書ける値なので、
-     そのまま URL に繋ぐと "https://..." や "javascript:..." を入れられる。
-     **表は配列にする。** オブジェクトの添字だと constructor や __proto__ が
-     Object.prototype から拾われて素通りする（indexOf なら継承を見ない） */
-  var OK=['ja','en','de','fr','es','ko','zh-Hans','zh-Hant'];
-  var PAGE=['index.html','features.html','guide.html',
-            'terms.html','privacy.html','contact.html'];
-  var q=new URLSearchParams(location.search).get('lang');
-  if(q){if(OK.indexOf(q)>=0){try{localStorage.setItem('kakesu-lang',q)}catch(e){}}return}
-  if(document.documentElement.lang!=='ja')return;  /* 飛ばすのは ja のページだけ */
-  var pick=null;
-  try{pick=localStorage.getItem('kakesu-lang')}catch(e){}
-  if(pick&&OK.indexOf(pick)<0)pick=null;  /* 表に無いものは捨てる（古い値・細工された値） */
-  if(!pick){
-    var l=navigator.languages||[navigator.language||''];
-    for(var i=0;i<l.length&&!pick;i++){
-      var t=String(l[i]).toLowerCase(),b=t.split('-')[0];
-      if(b==='ja')pick='ja';
-      else if(b==='zh')pick=/hant|tw|hk|mo/.test(t)?'zh-Hant':'zh-Hans';
-      else if(OK.indexOf(b)>=0)pick=b;
-    }
-    if(!pick)pick='en';  /* hreflang の x-default と同じ */
-  }
-  if(pick==='ja')return;
-  var page=location.pathname.split('/').pop();
-  if(PAGE.indexOf(page)<0)page='index.html';
-  location.replace(pick+'/'+page+location.hash);  /* 戻るで戻れるよう replace */
-}catch(e){}})();
-</script>
 <!--/chrome:alt-->
 </head>
 <body>
@@ -70,14 +38,14 @@
     <details class="langpick">
       <summary aria-label="選擇語言">繁體中文</summary>
       <ul>
-        <li><a lang="ja" hreflang="ja" href="../index.html?lang=ja">日本語</a></li>
-        <li><a lang="en" hreflang="en" href="../en/index.html?lang=en">English</a></li>
-        <li><a lang="de" hreflang="de" href="../de/index.html?lang=de">Deutsch</a></li>
-        <li><a lang="fr" hreflang="fr" href="../fr/index.html?lang=fr">Français</a></li>
-        <li><a lang="es" hreflang="es" href="../es/index.html?lang=es">Español</a></li>
-        <li><a lang="ko" hreflang="ko" href="../ko/index.html?lang=ko">한국어</a></li>
-        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/index.html?lang=zh-Hans">简体中文</a></li>
-        <li><a lang="zh-Hant" hreflang="zh-Hant" href="index.html?lang=zh-Hant" aria-current="true">繁體中文</a></li>
+        <li><a lang="ja" hreflang="ja" href="../index.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/index.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/index.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/index.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/index.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/index.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/index.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="index.html" aria-current="true">繁體中文</a></li>
       </ul>
     </details>
   </div>

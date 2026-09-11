@@ -132,59 +132,25 @@ def block_alt(lang: str, page: str) -> str:
     lines.append(f'<link rel="apple-touch-icon" href="{asset(lang, "icon-512.png")}">')
     lines.append(
         f'<link rel="stylesheet" href="{asset(lang, "style.css")}?v={css_version()}">')
-    lines.append(block_route())
     return "\n".join(lines)
 
 
-# **この LP で唯一の JavaScript。**
+# **言語の自動振り分けは入れない（2026-09-11 に一度入れて外した）。**
 #
-# 静的配信なのでサーバ側で `Accept-Language` を見られない。ja を直下に置いている以上、
-# ルート URL をそのまま踏んだ人には日本語が出る（SNS で共有されたリンク、直打ち）。
-# App Store とアプリからの導線は言語別 URL を指しているので届かないのはここだけだが、
-# 英語圏の人に日本語を出して終わる経路が1本残るのは具合が悪い。
+# ルート URL を直に踏んだ人に日本語が出るのを JS で振り分けようとしたが、やめた。
 #
-# **止めたいときはこの関数が返す文字列を空にして `python3 tools/i18n.py` を流す。**
-# それだけで全ページから消える（HTML を手で直す必要はない）。
+# - 効くのは「共有リンク・直打ち」だけ。App Store（`fastlane/metadata/*/marketing_url.txt`）と
+#   アプリ内（`SiteLinks.swift`）はどちらも言語別 URL を指しているので通らない。
+#   その1本にも右上の言語切替がある以上、省けるのは「自分で1回選ぶ手間」だけだった
+# - 代わりに、サイト唯一の「外から書ける値（?lang= / localStorage）を遷移先に変える」
+#   コードを抱えることになる。実際に2度続けて穴を開けた
+#   （検証なしで外部 URL へ飛ばせた／表をオブジェクトにして constructor が素通りした）
+# - 分析 SDK を入れない方針なので、ルートにどれだけ人が来ているか測れない。
+#   効果を確かめられない機能のためにリスクだけが常駐する
 #
-# 検索エンジンへの影響: Google は言語による自動転送を勧めていない。
-# hreflang は全ページに入れてあるので索引付けの手がかりは残るが、
-# ja のページが英語版として扱われる可能性は残る。
-# この LP の主な入口は App Store なので、その不利より取りこぼしを減らすほうを採った。
-def block_route() -> str:
-    return (
-        '<script>\n'
-        '/* 言語の自動振り分け。JS が無ければ日本語のまま出て、右上の言語切替で選べる */\n'
-        '(function(){try{\n'
-        '  /* **行き先は必ずこの表から選ぶ。** ?lang= も localStorage も外から書ける値なので、\n'
-        '     そのまま URL に繋ぐと "https://..." や "javascript:..." を入れられる。\n'
-        '     **表は配列にする。** オブジェクトの添字だと constructor や __proto__ が\n'
-        '     Object.prototype から拾われて素通りする（indexOf なら継承を見ない） */\n'
-        "  var OK=['ja','en','de','fr','es','ko','zh-Hans','zh-Hant'];\n"
-        "  var PAGE=['index.html','features.html','guide.html',\n"
-        "            'terms.html','privacy.html','contact.html'];\n"
-        "  var q=new URLSearchParams(location.search).get('lang');\n"
-        "  if(q){if(OK.indexOf(q)>=0){try{localStorage.setItem('kakesu-lang',q)}catch(e){}}return}\n"
-        "  if(document.documentElement.lang!=='ja')return;  /* 飛ばすのは ja のページだけ */\n"
-        '  var pick=null;\n'
-        "  try{pick=localStorage.getItem('kakesu-lang')}catch(e){}\n"
-        '  if(pick&&OK.indexOf(pick)<0)pick=null;  /* 表に無いものは捨てる（古い値・細工された値） */\n'
-        '  if(!pick){\n'
-        "    var l=navigator.languages||[navigator.language||''];\n"
-        '    for(var i=0;i<l.length&&!pick;i++){\n'
-        "      var t=String(l[i]).toLowerCase(),b=t.split('-')[0];\n"
-        "      if(b==='ja')pick='ja';\n"
-        "      else if(b==='zh')pick=/hant|tw|hk|mo/.test(t)?'zh-Hant':'zh-Hans';\n"
-        "      else if(OK.indexOf(b)>=0)pick=b;\n"
-        '    }\n'
-        "    if(!pick)pick='en';  /* hreflang の x-default と同じ */\n"
-        '  }\n'
-        "  if(pick==='ja')return;\n"
-        "  var page=location.pathname.split('/').pop();\n"
-        "  if(PAGE.indexOf(page)<0)page='index.html';\n"
-        "  location.replace(pick+'/'+page+location.hash);  /* 戻るで戻れるよう replace */\n"
-        '}catch(e){}})();\n'
-        '</script>'
-    )
+# 入口の振り分けは `hreflang`（`block_alt`）と言語切替（`block_head`）に任せる。
+# もし公開後に「共有リンクから来る人が多い」と分かったら作り直す。
+# **そのときは急ぎではないので、入れる前に人のレビューを通すこと。**
 
 
 def block_head(lang: str, page: str) -> str:
@@ -203,10 +169,8 @@ def block_head(lang: str, page: str) -> str:
     out.append('      <ul>')
     for other, ocfg in LANGS.items():
         cur = ' aria-current="true"' if other == lang else ""
-        # **`?lang=` は自動振り分けを黙らせるための印。**
-        # 自分で選んだ言語は覚えて、次からは勝手に飛ばさない（`block_route`）
         out.append(f'        <li><a lang="{other}" hreflang="{other}" '
-                   f'href="{rel(lang, other, page)}?lang={other}"{cur}>{ocfg["native"]}</a></li>')
+                   f'href="{rel(lang, other, page)}"{cur}>{ocfg["native"]}</a></li>')
     out.append('      </ul>')
     out.append('    </details>')
     out.append('  </div>')
