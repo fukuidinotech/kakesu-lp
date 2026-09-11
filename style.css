@@ -43,7 +43,8 @@ body {
 .page-header h1 { font-size: 2.5rem; margin: 0 0 .25rem; letter-spacing: .02em; }
 .page-header .lede { font-size: 1.25rem; color: var(--ink); margin: 0; line-height: 1.6; }
 
-h2 { font-size: 1.15rem; margin: 2.5rem 0 .75rem; }
+/* h1 2.5rem と本文 1rem のあいだが空いていた。セクションの切れ目はここで作る */
+h2 { font-size: 1.5rem; margin: 2.75rem 0 .9rem; line-height: 1.45; }
 p { margin: 0 0 1rem; }
 a { color: var(--accent); }
 
@@ -226,3 +227,65 @@ code {
   font-size: .8rem;
   color: var(--ink3);   /* 3.59:1。メタ情報専用 */
 }
+
+/* --- セクションの帯（トップページ） ---
+   --bg と --card の明度差は 1.2:1 しかない。境目は 1px の罫線に持たせる */
+.band { background: var(--bg); }
+.band-alt { background: var(--card); }
+.band + .band { border-top: 1px solid var(--line); }
+.band > .wrap { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.band > .wrap > :first-child { margin-top: 0; }
+.band > .wrap > :last-child { margin-bottom: 0; }
+/* ヒーローは .page-header 自身が余白を持っているので二重にしない */
+.band-hero > .wrap { padding-top: 0; }
+.band-hero .page-header { padding-bottom: 0; }
+
+/* --- 1機能＝スクショ1枚。左右を交互に置く --- */
+.feature { display: flex; gap: 1.75rem; align-items: center; }
+.feature.rev { flex-direction: row-reverse; }
+.feature .body { flex: 1 1 auto; min-width: 0; }
+.feature .body > :first-child { margin-top: 0; }
+.feature .body > :last-child { margin-bottom: 0; }
+.feature figure { margin: 0; flex: 0 0 200px; }
+.feature figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+@media (max-width: 34rem) {
+  .feature, .feature.rev { display: block; }
+  .feature figure { max-width: 190px; margin: 0 0 1.25rem; }
+}
+
+/* ヒーロー直下の1枚。最初の画面でアプリそのものを見せる */
+.hero-shot { margin: 2rem auto 0; max-width: 248px; }
+.hero-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+}
+
+/* 公開したら App Store バッジに差し替える置き場。
+   **押せないので瑠璃を使わない**（瑠璃＝操作できるもの） */
+.cta { text-align: center; margin: 1.75rem 0 0; }
+.cta-soon {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .5rem 1.3rem;
+  background: var(--card);
+  color: var(--ink2);
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+/* カードは2列。1列に積むと4枚とも同じ重さに見える */
+.grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0; }
+.grid2 .card { margin: 0; }
+@media (max-width: 34rem) { .grid2 { grid-template-columns: 1fr; } }
