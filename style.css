@@ -158,9 +158,52 @@ footer a { color: var(--ink2); }
 .site-footer nav a { color: var(--ink2); }
 .site-footer .copy { margin: 0 0 0 auto; color: var(--ink3); }
 
+/* --- 言語切替 ---
+   8言語をヘッダーに並べるとナビが壊れるので、details で畳む。
+   JS を使わない（GitHub Pages に置くだけで動くようにするため） */
+.langpick { position: relative; font-size: .85rem; flex: 0 0 auto; }
+.langpick > summary {
+  list-style: none;
+  cursor: pointer;
+  color: var(--accent);
+  padding: .15rem .5rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.langpick > summary::-webkit-details-marker { display: none; }
+.langpick > summary::after { content: " \25BE"; color: var(--ink3); }
+.langpick > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.langpick[open] > summary { background: var(--accent-soft); color: var(--accent-ink); }
+.langpick ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + .4rem);
+  z-index: 10;
+  margin: 0;
+  padding: .35rem;
+  list-style: none;
+  min-width: 9rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .12);
+}
+.langpick li { margin: 0; }
+.langpick ul a {
+  display: block;
+  padding: .3rem .6rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.langpick ul a:hover { background: var(--accent-soft); }
+/* 今いる言語は移動先ではないので、瑠璃を使わない */
+.langpick ul a[aria-current="true"] { color: var(--ink2); font-weight: 600; }
+
 @media (max-width: 26rem) {
   .site-header nav { gap: .75rem; font-size: .85rem; }
   .site-header .brand { font-size: 1rem; }
+  .site-header .inner { gap: .6rem; }
 }
 
 /* --- 操作画像 --- */

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用方法 — Kakesu</title>
+<meta name="description" content="Kakesu 的使用方法。保存、找到、生成摘要、打开、整理、隐藏、留备份。">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/guide.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/guide.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/guide.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/guide.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/guide.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/guide.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="features.html">功能</a>
+      <a href="guide.html" aria-current="page">使用方法</a>
+      <a href="contact.html">联系</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="选择语言">简体中文</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="../guide.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/guide.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/guide.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/guide.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/guide.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/guide.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="guide.html" aria-current="true">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/guide.html">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>使用方法</h1>
+</header>
+
+<h2 id="save">1. 保存</h2>
+<p>入口有两个。两种方式都是按下的瞬间保存就完成了。</p>
+<div class="card">
+  <h3>从共享表单</h3>
+  <p>
+    在 Safari 等应用中打开网页，点共享按钮 → 选择 <strong>Kakesu</strong>。
+    如果列表里没有，请在共享表单的“更多”里把 Kakesu 打开。
+  </p>
+  <p>
+    选中的那一刻保存就已经完成。接着出现的界面可以
+    <strong>当场加上标签和备注</strong>，不加直接关掉也没关系，之后在编辑界面补上即可。
+    按错的时候，用左上角的<strong>“撤销”</strong>只删掉刚刚创建的那一条。
+  </p>
+</div>
+<div class="card">
+  <h3>粘贴已复制的网址</h3>
+  <p>
+    在已复制网址的状态下打开应用，点<strong>右上角的粘贴按钮</strong>。
+  </p>
+</div>
+<p>
+  <strong>标题和缩略图会在之后补上。</strong>
+  刚保存时列表里只有网址，应用打开期间会依次去取。
+  即使在信号不好的地方保存，保存本身也不会失败。
+</p>
+<p>
+  同一个页面保存两次也不会变成两条
+  （<code>?utm_source=</code> 这类追踪参数和 <code>www.</code> 的差异会被忽略，视作同一个页面）。
+</p>
+
+<h2 id="find">2. 找到</h2>
+<ul>
+  <li><strong>搜索</strong> — 标题、网址、标签、备注、<strong>网页正文</strong>一并查找。确认过的搜索词最多保留 5 条作为候选。</li>
+  <li><strong>按标签筛选</strong> — 点一下列表上方的标签，就只剩该标签。再点一次取消。</li>
+  <li><strong>用标签页区分</strong> — 全部 / 收藏 / 未读。选中的状态下次打开仍在。</li>
+</ul>
+<p>
+  未读是<strong>圆点</strong>，收藏是<strong>星标</strong>。
+</p>
+<p>
+  <strong>不只是标题，网页正文也在搜索范围内。</strong>
+  保存之后，会连同标题一起收录正文的开头。
+  就算不记得标题，也能靠正文里出现过的词把它挖出来。
+</p>
+<div class="card">
+  <h3 id="ask">提问（仅支持的设备）</h3>
+  <p>
+    通过列表右上角的<strong>闪光标记按钮</strong>，可以用自己的话提问。
+    像“怎么用？”“最近都保存了什么？”“未读堆在哪儿了？”这样问，
+    答案下方会列出<strong>参考的项目</strong>，可以直接打开。
+  </p>
+  <p>
+    <strong>只在设备内运行。</strong>问题和答案都不会发送到外部。
+    交给模型的，只是与问题相近的少数几条的标题、标签、备注、网站名，
+    以及数量和常用标签之类的统计。<strong>不会交出完整的网址。</strong>
+  </p>
+  <p>
+    <strong>可以接着问。</strong>像“那是什么时候保存的？”这样，
+    能承接前面的对话来提问。想换话题时，请按左上角的
+    <strong>“新对话”</strong>，此前的对话会清空。
+    对话不会留在任何地方，关掉界面也就没了。
+  </p>
+  <p>
+    答案下方的<strong>“复制”</strong>可以原样抄下来。
+    问起这个网站的位置时，会以可点击的链接回答。
+    <strong>能变成可点击链接的只有这个网站。</strong>
+    绝不会把你保存的页面网址写进答案里。
+  </p>
+  <p>
+    只有在支持 Apple Intelligence 的设备（iOS 26 及以上）
+    并已在 iOS 设置中启用时，按钮才会出现。
+    不支持的设备上根本不会出现这个按钮。
+  </p>
+</div>
+<div class="card">
+  <h3 id="summary">为文章生成摘要（仅支持的设备）</h3>
+  <p>
+    在列表中<strong>长按文章 → 选择“摘要”</strong>，界面一打开摘要就在那里。
+    <strong>这不是用来阅读的界面。</strong>它是用来决定现在读不读的。
+  </p>
+  <p>
+    可以就这样<strong>继续就这篇文章提问</strong>。
+    答案的依据<strong>只有这一页的正文</strong>，不混入其他收藏。
+    没能取到正文的页面无法生成摘要（那时会如实告知）。
+  </p>
+  <p>
+    <strong>每篇文章的对话只保留最新 5 条在设备上。</strong>
+    这是为了以后再打开同一篇文章时能接着问。
+    <strong>不会发送到 iCloud。</strong>换设备时不会带过去。
+  </p>
+  <p>
+    保留下来的对话可在<strong>“提问”界面的左上角</strong>（对话气泡标记）查看。
+    可以一条条删除，也可以用右上角的“全部删除”一并清除。
+    在摘要界面，左上角的垃圾桶只删除这篇文章的对话。
+  </p>
+  <p>
+    与“提问”一样，只有支持 Apple Intelligence 的设备（iOS 26 及以上）
+    才会在菜单中出现。
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/01-list.png" alt="列表。上方的标签页在全部 / 收藏 / 未读之间切换，下方的标签用来筛选。圆点表示未读。" loading="lazy">
+    <figcaption>列表。上方的标签页在全部 / 收藏 / 未读之间切换，下方的标签用来筛选。圆点表示未读。</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/08-ask.png" alt="“提问”界面。答案出现在问题下方，再下面是参考的项目。" loading="lazy">
+    <figcaption>提问。答案下方列出参考的项目，可以直接打开。只在设备内运行。</figcaption>
+  </figure>
+</div>
+
+<h2 id="open">3. 打开</h2>
+<div class="card">
+  <h3>点一下</h3>
+  <p>在应用内打开。读完关掉后，回到列表的同一位置。打开的那一刻即视为已读。</p>
+</div>
+<div class="card">
+  <h3 id="reader">以阅读器打开</h3>
+  <p>
+    去掉广告和多余的东西，只显示正文。<strong>默认是开启的。</strong>
+    想看页面原样时，请关闭<strong>设置 → 显示 →“以阅读器打开”</strong>。
+    不支持阅读器的页面，即使不关也会照原样打开。
+  </p>
+  <p>字号和背景色可以在打开的界面里调整。</p>
+</div>
+<div class="card">
+  <h3>长按 → 在浏览器中打开</h3>
+  <p>需要登录的页面，或想用扩展的页面，从这里交给 Safari。</p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/02-menu.png" alt="长按出现的菜单。编辑、摘要、收藏、排序、在浏览器中打开、重新获取、删除。" loading="lazy">
+    <figcaption>长按出现的菜单。编辑、摘要、收藏、排序、在浏览器中打开、重新获取、删除。“摘要”只在支持的设备上出现。</figcaption>
+  </figure>
+</div>
+
+<h2 id="edit">4. 整理</h2>
+<p><strong>长按 → 编辑</strong>，可以修改标题、标签、备注和未读状态。</p>
+<ul>
+  <li><strong>标题</strong> — 获取失败或抓到奇怪标题时，在这里改。</li>
+  <li><strong>标签</strong> — 输入即可添加。用过的标签会作为候选出现。大小写视作相同。</li>
+  <li><strong>备注</strong> — 写一行当初为什么保存，以后会很有用。</li>
+  <li><strong>缩略图</strong> — 也可以只把这一条的图片关掉。</li>
+</ul>
+<p>
+  <strong>排序</strong>是长按 → 排序 → 用手指拖动。
+  正在筛选或搜索时无法排序（只移动看得见的一部分，会破坏整体的顺序）。
+</p>
+<p>
+  没能取到标题的项目，用<strong>长按 → 重新获取</strong>再去取一次。
+</p>
+<div class="card">
+  <h3 id="tags">重命名标签、删除标签</h3>
+  <p>
+    <strong>设置 → 屏蔽</strong>里会列出正在使用的标签和各自的数量。
+    <strong>把标签那一行向左轻扫</strong>，会出现重命名和删除。
+    两者都<strong>对全部项目一并生效</strong>。
+  </p>
+  <p>
+    <strong>删除标签不会删除书签。</strong>只是把该标签摘掉而已。
+    标签变多时，可用同一界面的搜索来缩小范围。
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/03-edit.png" alt="编辑界面。修正标题、添加标签、写下备注。用过的标签会作为候选出现。" loading="lazy">
+    <figcaption>编辑界面。修正标题、添加标签、写下备注。用过的标签会作为候选出现。</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/04-reorder.png" alt="排序中。抓住右端的手柄拖动。" loading="lazy">
+    <figcaption>排序中。抓住右端的手柄拖动。</figcaption>
+  </figure>
+</div>
+
+<h2 id="hide">5. 删除与隐藏</h2>
+<div class="card">
+  <h3>删除</h3>
+  <p>
+    向左轻扫，或长按 → 删除。
+    <strong>删除之后，“撤销”会出现几秒。</strong>
+    按下就能恢复。不去按它，那时才真的删掉。
+  </p>
+</div>
+<div class="card">
+  <h3>隐藏（屏蔽）</h3>
+  <p>
+    设置 → 屏蔽。登记<strong>网址或标题中包含的字符串</strong>后，
+    命中的内容就会从列表中消失。也可以按标签隐藏。
+    两种方式都<strong>保留规则，随时开关。</strong>
+  </p>
+</div>
+<p>
+  已隐藏的数量显示在列表下方。点一下会打开设置，从那里进入“屏蔽”。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/05-undo.png" alt="删除之后。“撤销”只出现几秒。不去按它，那时才真的删掉。" loading="lazy">
+    <figcaption>删除之后。“撤销”只出现几秒。不去按它，那时才真的删掉。</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/07-mute.png" alt="屏蔽设置。网址或标题的字符串，以及按标签屏蔽。可以保留规则只是关闭。" loading="lazy">
+    <figcaption>屏蔽设置。网址或标题的字符串，以及按标签屏蔽。可以保留规则只是关闭。</figcaption>
+  </figure>
+</div>
+
+<h2 id="backup">6. 留备份</h2>
+<p>
+  每周一次，把保存的全部内容写成 JSON，放进 iCloud 云盘的 <strong>Kakesu 文件夹</strong>。
+  可以从“文件”App 打开，删掉应用之后也还在。
+</p>
+<p>
+  备份保留<strong>最近 8 次</strong>，旧的会依次删去。
+</p>
+<p>
+  <strong>设置 → 数据</strong>里随时可以<strong>导出</strong>（送到哪里由你决定）和
+  <strong>导入</strong>。导入时会跳过已有的网址，只补上没有的，不会覆盖。
+  同一界面还会显示最近一次自动备份的日期。
+</p>
+
+<h2 id="lock">7. 防止被人看到</h2>
+<p>
+  保存的网址，就是浏览记录本身。
+  如果设备有可能交到别人手上，请打开<strong>设置 → 应用锁</strong>。
+  打开应用时会用 Face ID / Touch ID 或设备密码确认。
+</p>
+<ul>
+  <li><strong>默认是关闭的。</strong>需要的人再用就好。</li>
+  <li>
+    <strong>只是打开链接再回来，不会追问。</strong>
+    离开应用超过 1 分钟时才确认。
+    每次阅读都要刷脸，应用就没法用了。
+  </li>
+  <li>
+    脸或指纹通不过时，<strong>用设备密码也能打开。</strong>
+    只留生物识别，会把自己关在门外。
+  </li>
+  <li>切换应用的界面上，不会映出列表内容。</li>
+</ul>
+<p>
+  设备未设置密码时无法使用此功能（设置项会变成不可点击）。
+</p>
+<p>
+  <strong>从共享表单保存不会被锁拦住。</strong>
+  在保存前插入确认，会漏掉那些你以为已经丢进去的东西。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/06-settings.png" alt="设置中的安全。应用锁默认关闭。打开后，每次打开应用都会先确认。" loading="lazy">
+    <figcaption>设置中的安全。应用锁默认关闭。打开后，每次打开应用都会先确认。</figcaption>
+  </figure>
+</div>
+
+<h2 id="about">8. 阅读条款与政策</h2>
+<p>
+  从设置的<strong>“关于本应用”</strong>，可以打开
+  <a href="terms.html">使用条款</a>和<a href="privacy.html">隐私政策</a>。
+  同一处还会显示应用版本，联系时请一并告知。
+</p>
+
+<h2 id="widget">从主屏幕想起来</h2>
+<p>
+  把小组件放到主屏幕，就会显示<strong>未读数量</strong>。
+  小尺寸列出 1 条、中尺寸最多 3 条最近的标题。
+  点一下会打开应用。
+</p>
+<p>
+  <strong>开启应用锁期间，只显示数量。</strong>
+  标题和网站名都不会出现在小组件上。
+  因为主屏幕是没有锁、会被人看到的地方。
+</p>
+
+<h2 id="shortcuts">从快捷指令使用</h2>
+<ul>
+  <li><strong>保存书签</strong> — 交给它一个网址就会保存。标题会在下次打开应用时补上。</li>
+  <li><strong>搜索书签</strong> — 从标题、网址、标签、备注、正文中查找。<strong>被屏蔽的内容不会返回</strong>（列表里看不到的东西却能从快捷指令冒出来，隐藏就失去意义了）。</li>
+</ul>
+<p>
+  在快捷指令 App 的“App”里选择 Kakesu 就能找到。也可以放进自动化里。
+</p>
+
+<h2 id="sync">在另一台设备上接着读</h2>
+<p>
+  只要登录的是同一个 Apple 账户，内容就会直接出现。
+  没有创建账号这一步。想停止同步时，请到
+  iOS 的“设置”→ Apple 账户 → iCloud，把 Kakesu 关掉。
+</p>
+
+<h2 id="trouble">遇到问题时</h2>
+<ul>
+  <li><strong>共享表单里没有</strong> — 请在共享表单的“更多”里把 Kakesu 打开。</li>
+  <li><strong>标题还是网址</strong> — 用 JavaScript 渲染的页面有时取不到标题。请在编辑界面修改，或试试重新获取。</li>
+  <li><strong>另一台设备上没有</strong> — 请查看设置里的 iCloud 状态。未登录时那里会显示出来。</li>
+</ul>
+
+<h2>联系</h2>
+<p>
+  这里没写到的，欢迎通过<a href="contact.html">联系页面</a>告诉我们。
+</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="features.html">功能一览</a>
+      <a href="guide.html">使用方法</a>
+      <a href="terms.html">使用条款</a>
+      <a href="privacy.html">隐私政策</a>
+      <a href="contact.html">联系</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>

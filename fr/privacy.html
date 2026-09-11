@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — Kakesu</title>
+<meta name="description" content="La politique de confidentialité de Kakesu. Le développeur ne collecte aucune donnée des utilisateurs.">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/fr/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/privacy.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/privacy.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/privacy.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="features.html">Fonctionnalités</a>
+      <a href="guide.html">Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="Choisir la langue">Français</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="../privacy.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/privacy.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/privacy.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="privacy.html" aria-current="true">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/privacy.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/privacy.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/privacy.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/privacy.html">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>Politique de confidentialité</h1>
+</header>
+
+<h2>En bref</h2>
+<p>
+<strong>Le développeur ne collecte aucune donnée des utilisateurs.</strong>
+Kakesu n'a aucun serveur tenu par le développeur. Il n'y a ni publicité, ni outil d'analyse, ni SDK tiers.
+</p>
+
+<h2>Ce que l'app conserve</h2>
+<p>
+Les URL que vous enregistrez, avec les titres, les étiquettes, les notes, l'état non-lu et favori, et les réglages de l'app.
+Pour que la recherche puisse les déterrer, elle conserve aussi
+<strong>le début du texte de la page enregistrée (jusqu'à 4 000 caractères)</strong>.
+Tout cela réside <strong>sur votre appareil</strong> et dans <strong>votre propre iCloud</strong>
+(une base de données privée CloudKit).
+</p>
+<p>
+Par conception, chez Apple, le développeur ne peut pas atteindre cette base privée.
+Il ne peut ni en consulter le contenu, ni l'extraire, ni le transmettre à qui que ce soit.
+</p>
+
+<h2>Les connexions établies par l'app</h2>
+<p>
+Kakesu n'établit de connexion réseau que dans ces cas.
+</p>
+<ul>
+  <li>
+    <strong>Pour aller chercher des informations sur une page enregistrée.</strong>
+    Pour obtenir le titre, la vignette, le favicon et le texte servant à la recherche, l'app s'adresse
+    <strong>directement au serveur de la page enregistrée</strong>.
+    Cette connexion ne passe pas par le développeur. Cela dit,
+    <strong>une trace de l'accès peut subsister chez l'exploitant de ce site</strong>
+    (exactement comme si vous aviez ouvert la page dans un navigateur ordinaire).
+  </li>
+  <li>
+    <strong>Synchronisation iCloud et sauvegardes.</strong>
+    Elles se font vers l'iCloud d'Apple. Le traitement relève de la
+    <a href="https://www.apple.com/legal/privacy/">politique de confidentialité d'Apple</a>.
+  </li>
+</ul>
+<p>
+L'ouverture d'une page dans l'app utilise le SFSafariViewController d'Apple.
+Elle se fait par défaut en mode Lecteur, ce qui reste dans ce même mécanisme.
+Les cookies et l'historique restent séparés de Safari, et le développeur ne peut pas en obtenir le contenu.
+</p>
+
+<h2>La sauvegarde dans iCloud Drive</h2>
+<p>
+Une fois par semaine, tout ce que vous avez enregistré est écrit en fichier JSON dans votre iCloud Drive
+(le dossier Kakesu de l'app Fichiers).
+C'est une copie déposée à un endroit que vous pouvez lire ; elle n'est pas envoyée au développeur.
+</p>
+
+<h2>Publicité, analyse, suivi</h2>
+<p>
+Rien de tout cela. Aucune publicité n'est affichée. Il n'y a pas d'achat intégré.
+Aucun outil d'analyse mesurant l'usage n'est inclus.
+L'autorisation App Tracking Transparency ne vous sera jamais demandée.
+</p>
+
+<h2>« Demander » (Apple Intelligence)</h2>
+<p>
+Sur les appareils compatibles, vous pouvez interroger l'app sur les signets que vous avez amassés.
+Cette fonction <strong>repose uniquement sur le modèle embarqué d'iOS (Apple Intelligence).</strong>
+Ni les questions ni les réponses ne partent vers un serveur du développeur ou vers un serveur externe.
+</p>
+<p>
+Ce qui est remis au modèle, après réduction à six éléments au plus parmi les plus proches de la question,
+ce sont cinq choses : titre, étiquettes, note, nom d'hôte du site et état non-lu.
+S'y ajoutent des <strong>chiffres agrégés</strong> : décomptes, étiquettes les plus utilisées,
+sites d'où vous enregistrez le plus. <strong>Les URL complètes ne sont jamais remises.</strong>
+</p>
+<p>
+En cas de relance, <strong>l'échange jusque-là (questions et réponses) est remis au même modèle.</strong>
+C'est pour tenir le fil ; seules les dernières paires sont transmises. Cela non plus ne quitte l'appareil.
+Les questions portant sur l'ensemble de la collection ne sont pas stockées sur l'appareil non plus.
+Touchez « Nouvelle conversation », ou fermez l'écran, et elles disparaissent.
+</p>
+<p>
+<strong>Pour le résumé d'un seul article, le texte de cette page (son début uniquement) est remis au modèle embarqué.</strong>
+La seule base est le texte de cet article ; rien d'autre de votre collection n'y entre.
+Ici non plus le texte ne quitte l'appareil.
+</p>
+<p>
+<strong>Les conversations portant sur un seul article sont la seule chose qui reste sur votre appareil — les cinq plus récentes.</strong>
+C'est pour vous permettre de reprendre où vous en étiez en rouvrant le même article.
+<strong>Elles ne vont pas sur iCloud</strong>, ni chez le développeur, ni vers un serveur externe.
+Supprimez-les depuis « Conversations d'articles », accessible depuis l'écran Demander, une à une ou d'un coup avec « Tout supprimer ».
+Depuis l'écran du résumé, vous supprimez la seule conversation de cet article.
+Supprimer l'app les emporte avec elle.
+</p>
+<p>
+La fonction n'est disponible que sur les appareils compatibles avec Apple Intelligence, celui-ci étant activé dans les réglages d'iOS.
+Ailleurs, le point d'entrée n'apparaît pas du tout.
+</p>
+
+<h2>Face ID / Touch ID</h2>
+<p>
+Avec le verrouillage de l'app activé, l'ouverture vous authentifie par Face ID / Touch ID,
+ou par le code de l'appareil.
+</p>
+<p>
+<strong>Les données de visage et d'empreinte sont traitées par iOS, sur l'appareil.</strong>
+Cette app ne les obtient pas. Elles ne partent jamais vers le développeur.
+Tout ce que cette app reçoit, c'est si la vérification est passée.
+</p>
+<p>
+Tant que le verrouillage est activé, <strong>le widget de l'écran d'accueil n'affiche ni titres ni noms de sites</strong>
+non plus (seulement le nombre de non-lus).
+L'écran d'accueil est à la vue de tous, sans verrou devant.
+</p>
+
+<h2>Informations de plantage</h2>
+<p>
+Uniquement si vous avez activé « Partager avec les développeurs » dans les réglages d'iOS,
+Apple peut fournir au développeur des informations de plantage anonymes.
+C'est le mécanisme d'Apple, pas un envoi que Kakesu ferait de lui-même.
+Ces informations ne contiennent aucune des URL ni des notes que vous avez enregistrées.
+</p>
+
+<h2>Utilisation par les enfants</h2>
+<p>
+Kakesu n'est pas conçue pour une tranche d'âge particulière
+et ne collecte pas sciemment de données personnelles auprès d'enfants.
+</p>
+
+<h2>Suppression de vos données</h2>
+<ul>
+  <li>Les données sur l'appareil disparaissent quand vous supprimez l'app.</li>
+  <li>Ce qui a été synchronisé vers iCloud se supprime dans Réglages iOS → compte Apple → iCloud.</li>
+  <li>Les sauvegardes dans iCloud Drive se suppriment dans l'app Fichiers.</li>
+</ul>
+
+<h2>Modifications de cette politique</h2>
+<p>
+En cas de changement, cette page est mise à jour et la date en bas est réécrite.
+</p>
+
+<h2>Contact</h2>
+<p>
+<a href="mailto:fukuidinotech@gmail.com">fukuidinotech@gmail.com</a>
+</p>
+
+<p class="updated">Dernière mise à jour : 11 septembre 2026</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="features.html">Fonctionnalités</a>
+      <a href="guide.html">Guide</a>
+      <a href="terms.html">Conditions</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guía — Kakesu</title>
+<meta name="description" content="Cómo usar Kakesu: guardar, encontrar, resumir, abrir, ordenar, ocultar y guardar una copia.">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/es/guide.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/guide.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/guide.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/guide.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/guide.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/guide.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="features.html">Funciones</a>
+      <a href="guide.html" aria-current="page">Guía</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="Elegir idioma">Español</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="../guide.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/guide.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/guide.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/guide.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="guide.html" aria-current="true">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/guide.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/guide.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/guide.html">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>Guía</h1>
+</header>
+
+<h2 id="save">1. Guardar</h2>
+<p>Hay dos entradas. En las dos, el guardado termina en el momento en que pulsa.</p>
+<div class="card">
+  <h3>Desde la hoja para compartir</h3>
+  <p>
+    Abra una página en Safari o donde sea, pulse el botón de compartir y elija <strong>Kakesu</strong>.
+    Si no aparece en la lista, active Kakesu desde «Más» en la hoja para compartir.
+  </p>
+  <p>
+    En cuanto lo ha elegido, ya está guardado. La pantalla que sigue permite
+    <strong>añadir etiquetas y una nota ahí mismo</strong>, pero puede cerrarla sin poner nada
+    y completarlo luego en la pantalla de edición. Si pulsó por error,
+    <strong>«Deshacer»</strong>, arriba a la izquierda, retira solo el elemento recién creado.
+  </p>
+</div>
+<div class="card">
+  <h3>Pegar una URL copiada</h3>
+  <p>
+    Con una URL en el portapapeles, abra la app y pulse el <strong>botón de pegar, arriba a la derecha</strong>.
+  </p>
+</div>
+<p>
+  <strong>Los títulos y las miniaturas se rellenan solos, después.</strong>
+  Justo tras guardar solo se ven URL; la app las va buscando mientras esté abierta.
+  Guardar donde hay mala cobertura no hace que falle el guardado en sí.
+</p>
+<p>
+  Guardar dos veces la misma página no añade una segunda
+  (los parámetros de seguimiento como <code>?utm_source=</code> y un <code>www.</code> de diferencia se ignoran).
+</p>
+
+<h2 id="find">2. Encontrar</h2>
+<ul>
+  <li><strong>Búsqueda</strong> — títulos, URL, etiquetas, notas y <strong>el texto de las páginas</strong>, de una vez. Los cinco últimos términos buscados quedan como sugerencia.</li>
+  <li><strong>Acotar por etiqueta</strong> — pulse una etiqueta sobre la lista y solo queda esa. Púlsela otra vez para quitarla.</li>
+  <li><strong>Separar por pestaña</strong> — Todos / Favoritos / Sin leer. Su elección sigue ahí la próxima vez.</li>
+</ul>
+<p>
+  Lo no leído lleva un <strong>punto</strong>; los favoritos, una <strong>estrella</strong>.
+</p>
+<p>
+  <strong>Se busca en el texto de la página, no solo en el título.</strong>
+  Tras guardar, junto al título se conserva el principio del texto.
+  Una palabra que recuerde del cuerpo desentierra la página aunque el título no baste.
+</p>
+<div class="card">
+  <h3 id="ask">Preguntar (solo en dispositivos compatibles)</h3>
+  <p>
+    El <strong>botón con destellos</strong>, arriba a la derecha de la lista, le deja preguntar con sus palabras.
+    Pregunte «¿Cómo se usa esto?», «¿Qué he guardado últimamente?» o «¿Dónde se me acumula lo no leído?»:
+    los <strong>elementos consultados</strong> quedan bajo la respuesta, listos para abrirse.
+  </p>
+  <p>
+    <strong>Todo ocurre en su dispositivo.</strong> Ni la pregunta ni la respuesta salen fuera.
+    Al modelo se le entrega un puñado de elementos cercanos a la pregunta — título, etiquetas, nota, nombre del sitio —
+    más recuentos y sus etiquetas más usadas. <strong>Las URL completas no se entregan nunca.</strong>
+  </p>
+  <p>
+    <strong>Puede seguir preguntando.</strong> Una repregunta como «¿Cuándo lo guardé?»
+    se entiende a la luz de lo anterior. Para cambiar de tema, pulse
+    <strong>«Nueva conversación»</strong> arriba a la izquierda: todo lo anterior se borra.
+    La conversación no se almacena en ninguna parte, así que cerrar la pantalla también la borra.
+  </p>
+  <p>
+    <strong>«Copiar»</strong>, bajo la respuesta, la toma tal cual.
+    Pregunte dónde está este sitio y la respuesta llega como un enlace que puede pulsar.
+    <strong>Solo este sitio llega a ser un enlace pulsable.</strong>
+    Las URL de las páginas que ha guardado nunca se escriben en una respuesta.
+  </p>
+  <p>
+    El botón aparece solo en dispositivos compatibles con Apple Intelligence (iOS 26 o posterior),
+    y con ello activado en los ajustes de iOS. En los demás no hay botón alguno.
+  </p>
+</div>
+<div class="card">
+  <h3 id="summary">Resumir un artículo (solo en dispositivos compatibles)</h3>
+  <p>
+    <strong>Mantenga pulsado un artículo y elija «Resumen»</strong>: está ahí nada más abrirse.
+    <strong>No es una pantalla para leer.</strong> Es para decidir si lo lee ahora.
+  </p>
+  <p>
+    Desde ahí puede <strong>seguir preguntando por ese artículo</strong>.
+    Las respuestas se apoyan en <strong>el texto de esa página y nada más</strong>; no se mezcla el resto de lo guardado.
+    Una página cuyo texto no se pudo recuperar no se puede resumir, y así lo dice.
+  </p>
+  <p>
+    <strong>Las cinco conversaciones de artículos más recientes quedan en su dispositivo</strong>,
+    para que retome donde lo dejó al volver a abrir el mismo artículo.
+    <strong>No van a iCloud</strong>, ni pasan a un dispositivo nuevo.
+  </p>
+  <p>
+    Las que quedan están <strong>arriba a la izquierda de la pantalla Preguntar</strong> (el bocadillo).
+    Bórrelas de una en una, o de golpe con «Borrar todas», arriba a la derecha.
+    Desde la pantalla del resumen, la papelera de arriba a la izquierda borra solo la conversación de ese artículo.
+  </p>
+  <p>
+    Como «Preguntar», aparece en el menú solo en dispositivos compatibles con Apple Intelligence (iOS 26 o posterior).
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/01-list.png" alt="La lista. Las pestañas de arriba alternan entre Todos, Favoritos y Sin leer; las etiquetas de debajo acotan. El punto indica sin leer." loading="lazy">
+    <figcaption>La lista. Las pestañas de arriba alternan entre Todos, Favoritos y Sin leer; las etiquetas de debajo acotan. El punto indica sin leer.</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/08-ask.png" alt="La pantalla Preguntar. La respuesta aparece bajo la pregunta, y debajo los elementos consultados." loading="lazy">
+    <figcaption>Preguntar. Los elementos consultados quedan bajo la respuesta, listos para abrirse. Todo ocurre en su dispositivo.</figcaption>
+  </figure>
+</div>
+
+<h2 id="open">3. Abrir</h2>
+<div class="card">
+  <h3>Pulsar</h3>
+  <p>Se abre dentro de la app. Al cerrar vuelve al mismo punto de la lista. Con abrirlo queda marcado como leído.</p>
+</div>
+<div class="card">
+  <h3 id="reader">Abrir en el Lector</h3>
+  <p>
+    Muestra solo el texto, sin publicidad ni adornos. <strong>Está activado por omisión.</strong>
+    Para ver las páginas tal cual, desactive
+    <strong>Ajustes → Visualización → «Abrir en el Lector»</strong>.
+    Las páginas sin soporte de Lector se abren igualmente como siempre.
+  </p>
+  <p>El tamaño del texto y el color del fondo se cambian dentro del propio lector.</p>
+</div>
+<div class="card">
+  <h3>Pulsación larga → Abrir en el navegador</h3>
+  <p>Las páginas que piden iniciar sesión, o una extensión, pasan desde aquí a Safari.</p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/02-menu.png" alt="El menú de pulsación larga: Editar, Resumen, Favorito, Ordenar, Abrir en el navegador, Recuperar de nuevo, Borrar." loading="lazy">
+    <figcaption>El menú de pulsación larga: Editar, Resumen, Favorito, Ordenar, Abrir en el navegador, Recuperar de nuevo, Borrar. «Resumen» aparece solo en dispositivos compatibles.</figcaption>
+  </figure>
+</div>
+
+<h2 id="edit">4. Ordenar</h2>
+<p><strong>Pulsación larga → Editar</strong> cambia el título, las etiquetas, la nota y el estado de no leído.</p>
+<ul>
+  <li><strong>Título</strong> — corríjalo aquí cuando la recuperación falló, o la página entregó algo extraño.</li>
+  <li><strong>Etiquetas</strong> — escriba para añadir. Las ya usadas se sugieren. Mayúsculas y minúsculas cuentan igual.</li>
+  <li><strong>Nota</strong> — una línea sobre por qué lo guardó rinde después.</li>
+  <li><strong>Miniatura</strong> — la imagen se puede desactivar solo para este elemento.</li>
+</ul>
+<p>
+  El <strong>orden</strong> se cambia con pulsación larga → Ordenar → arrastrar con el dedo.
+  No se puede mientras acota o busca (mover una parte de lo visible rompería el orden del conjunto).
+</p>
+<p>
+  Para un elemento cuyo título nunca llegó, <strong>pulsación larga → Recuperar de nuevo</strong> envía la app otra vez.
+</p>
+<div class="card">
+  <h3 id="tags">Renombrar y borrar etiquetas</h3>
+  <p>
+    <strong>Ajustes → Silenciar</strong> lista sus etiquetas con su recuento.
+    <strong>Deslice a la izquierda la fila de una etiqueta</strong> para renombrar y borrar.
+    Ambas <strong>actúan sobre todos los elementos a la vez</strong>.
+  </p>
+  <p>
+    <strong>Borrar una etiqueta no borra los marcadores.</strong> Solo se la quita.
+    Cuando las etiquetas se multiplican, la búsqueda de esa misma pantalla las acota.
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/03-edit.png" alt="La pantalla de edición: corregir el título, añadir etiquetas, escribir una nota. Las etiquetas ya usadas se sugieren." loading="lazy">
+    <figcaption>La pantalla de edición: corregir el título, añadir etiquetas, escribir una nota. Las etiquetas ya usadas se sugieren.</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/04-reorder.png" alt="Durante el orden. Agarre el asa de la derecha y arrastre." loading="lazy">
+    <figcaption>Durante el orden. Agarre el asa de la derecha y arrastre.</figcaption>
+  </figure>
+</div>
+
+<h2 id="hide">5. Borrar y ocultar</h2>
+<div class="card">
+  <h3>Borrar</h3>
+  <p>
+    Deslice a la izquierda, o pulsación larga → Borrar.
+    <strong>Justo después aparece «Deshacer» unos segundos.</strong>
+    Púlselo y el elemento vuelve. Déjelo pasar y solo entonces desaparece.
+  </p>
+</div>
+<div class="card">
+  <h3>Ocultar (silenciar)</h3>
+  <p>
+    Ajustes → Silenciar. Registre <strong>una cadena presente en la URL o el título</strong>
+    y todo lo que coincida sale de la lista. También se ocultan etiquetas enteras.
+    En ambos casos, <strong>la regla permanece y se activa o se desactiva.</strong>
+  </p>
+</div>
+<p>
+  El número de ocultos se muestra bajo la lista. Al pulsarlo se abren los ajustes, donde espera «Silenciar».
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/05-undo.png" alt="Justo tras borrar. «Deshacer» aparece unos segundos. Déjelo pasar y solo entonces desaparece el elemento." loading="lazy">
+    <figcaption>Justo tras borrar. «Deshacer» aparece unos segundos. Déjelo pasar y solo entonces desaparece el elemento.</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/07-mute.png" alt="Ajustes de silenciado: cadenas presentes en la URL o el título, y etiquetas enteras. Una regla se desactiva sin borrarla." loading="lazy">
+    <figcaption>Ajustes de silenciado: cadenas presentes en la URL o el título, y etiquetas enteras. Una regla se desactiva sin borrarla.</figcaption>
+  </figure>
+</div>
+
+<h2 id="backup">6. Guardar una copia</h2>
+<p>
+  Una vez por semana, todo lo guardado se escribe como JSON en la <strong>carpeta Kakesu</strong>
+  de iCloud Drive. Se abre desde la app Archivos y permanece aunque borre la app.
+</p>
+<p>
+  Se conservan las <strong>ocho últimas</strong> copias; las más antiguas van cayendo.
+</p>
+<p>
+  <strong>Ajustes → Datos</strong> ofrece en cualquier momento <strong>exportar</strong> (el destino lo elige usted)
+  e <strong>importar</strong>. Al importar se omiten las URL ya presentes y se añade solo lo que falta.
+  Nunca se sobrescribe. En esa misma pantalla figura la fecha de la última copia automática.
+</p>
+
+<h2 id="lock">7. A salvo de miradas</h2>
+<p>
+  Una URL guardada es su historial, sin más.
+  Si su teléfono pasa por otras manos, active <strong>Ajustes → Bloqueo de la app</strong>.
+  Al abrirla se pedirá entonces Face ID / Touch ID, o el código del dispositivo.
+</p>
+<ul>
+  <li><strong>Está desactivado por omisión.</strong> Úselo solo si lo necesita.</li>
+  <li>
+    <strong>Volver de un enlace recién abierto no lo activa.</strong>
+    Solo una ausencia de un minuto o más.
+    Face ID en cada lectura haría la app inservible.
+  </li>
+  <li>
+    Si la cara o el dedo no pasan, <strong>el código del dispositivo también abre.</strong>
+    Fiarlo todo a la biometría sería arriesgarse a quedar fuera.
+  </li>
+  <li>El contenido de su lista no aparece en el selector de apps.</li>
+</ul>
+<p>
+  Sin código en el dispositivo la función no se puede usar (el ajuste deja de poder pulsarse).
+</p>
+<p>
+  <strong>El bloqueo nunca se aplica al guardado desde la hoja para compartir.</strong>
+  Una comprobación antes de guardar perdería justo las páginas que quería echar dentro.
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/06-settings.png" alt="Ajustes de seguridad. El bloqueo de la app está desactivado por omisión; activado, la app pregunta al abrirse." loading="lazy">
+    <figcaption>Ajustes de seguridad. El bloqueo de la app está desactivado por omisión; activado, la app pregunta al abrirse.</figcaption>
+  </figure>
+</div>
+
+<h2 id="about">8. Leer los términos y la política</h2>
+<p>
+  <strong>«Acerca de»</strong>, en los ajustes, abre los
+  <a href="terms.html">términos de uso</a> y la <a href="privacy.html">política de privacidad</a>.
+  La versión de la app está en el mismo sitio: indíquela cuando escriba.
+</p>
+
+<h2 id="widget">Recordar desde la pantalla de inicio</h2>
+<p>
+  Ponga el widget en la pantalla de inicio y mostrará <strong>cuántos quedan sin leer</strong>.
+  El tamaño pequeño cita un título reciente; el mediano, hasta tres.
+  Al pulsarlo se abre la app.
+</p>
+<p>
+  <strong>Con el bloqueo activado muestra solo la cifra.</strong>
+  Ni títulos ni nombres de sitios en el widget.
+  La pantalla de inicio queda a la vista, sin cerradura delante.
+</p>
+
+<h2 id="shortcuts">Usarla desde Atajos</h2>
+<ul>
+  <li><strong>Guardar marcador</strong> — entréguele una URL y queda guardada. El título se rellena la próxima vez que abra la app.</li>
+  <li><strong>Buscar marcadores</strong> — busca en títulos, URL, etiquetas, notas y texto. <strong>Lo silenciado no se devuelve</strong> (si lo oculto en la lista reapareciera por Atajos, ocultarlo no serviría de nada).</li>
+</ul>
+<p>
+  Elija Kakesu en «Apps» dentro de la app Atajos. También funcionan en automatizaciones.
+</p>
+
+<h2 id="sync">Seguir en otro dispositivo</h2>
+<p>
+  Mientras haya iniciado sesión con la misma cuenta de Apple, sencillamente está ahí.
+  No hay cuenta que crear. Para detener la sincronización, desactive Kakesu en
+  Ajustes de iOS → cuenta de Apple → iCloud.
+</p>
+
+<h2 id="trouble">Cuando algo no va</h2>
+<ul>
+  <li><strong>No sale en la hoja para compartir</strong> — active Kakesu desde «Más» en la hoja para compartir.</li>
+  <li><strong>El título sigue siendo una URL</strong> — las páginas dibujadas con JavaScript a veces no entregan título. Corríjalo en la pantalla de edición, o pruebe «Recuperar de nuevo».</li>
+  <li><strong>No aparece en el otro dispositivo</strong> — mire el estado de iCloud en los ajustes. Si no ha iniciado sesión, ahí lo dice.</li>
+</ul>
+
+<h2>Contacto</h2>
+<p>
+  Para lo que no esté escrito aquí, la <a href="contact.html">página de contacto</a> es el camino.
+</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="features.html">Funciones</a>
+      <a href="guide.html">Guía</a>
+      <a href="terms.html">Términos</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>

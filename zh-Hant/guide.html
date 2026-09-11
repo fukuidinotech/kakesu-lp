@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>使用方式 — Kakesu</title>
+<meta name="description" content="Kakesu 的使用方式。儲存、找到、產生摘要、開啟、整理、隱藏、留備份。">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/guide.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/guide.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/guide.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/guide.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/guide.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/guide.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="features.html">功能</a>
+      <a href="guide.html" aria-current="page">使用方式</a>
+      <a href="contact.html">聯絡</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="選擇語言">繁體中文</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="../guide.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/guide.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/guide.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/guide.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/guide.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/guide.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/guide.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="guide.html" aria-current="true">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>使用方式</h1>
+</header>
+
+<h2 id="save">1. 儲存</h2>
+<p>入口有兩個。兩種方式都是按下的瞬間儲存就完成了。</p>
+<div class="card">
+  <h3>從分享表單</h3>
+  <p>
+    在 Safari 等 App 中開啟網頁，點分享按鈕 → 選擇 <strong>Kakesu</strong>。
+    如果列表裡沒有，請在分享表單的「更多」裡把 Kakesu 打開。
+  </p>
+  <p>
+    選取的那一刻儲存就已經完成。接著出現的畫面可以
+    <strong>當場加上標籤和備註</strong>，不加直接關掉也沒關係，之後在編輯畫面補上即可。
+    按錯的時候，用左上角的<strong>「還原」</strong>只刪掉剛剛建立的那一筆。
+  </p>
+</div>
+<div class="card">
+  <h3>貼上已複製的網址</h3>
+  <p>
+    在已複製網址的狀態下開啟 App，點<strong>右上角的貼上按鈕</strong>。
+  </p>
+</div>
+<p>
+  <strong>標題和縮圖會在之後補上。</strong>
+  剛儲存時列表裡只有網址，App 開啟期間會依序去取。
+  即使在收訊不好的地方儲存，儲存本身也不會失敗。
+</p>
+<p>
+  同一個頁面儲存兩次也不會變成兩筆
+  （<code>?utm_source=</code> 這類追蹤參數和 <code>www.</code> 的差異會被忽略，視為同一個頁面）。
+</p>
+
+<h2 id="find">2. 找到</h2>
+<ul>
+  <li><strong>搜尋</strong> — 標題、網址、標籤、備註、<strong>網頁內文</strong>一併尋找。確認過的搜尋詞最多保留 5 筆作為候選。</li>
+  <li><strong>依標籤篩選</strong> — 點一下列表上方的標籤，就只剩該標籤。再點一次取消。</li>
+  <li><strong>用分頁區分</strong> — 全部 / 收藏 / 未讀。選取的狀態下次開啟仍在。</li>
+</ul>
+<p>
+  未讀是<strong>圓點</strong>，收藏是<strong>星號</strong>。
+</p>
+<p>
+  <strong>不只是標題，網頁內文也在搜尋範圍內。</strong>
+  儲存之後，會連同標題一起收錄內文的開頭。
+  就算不記得標題，也能靠內文裡出現過的詞把它挖出來。
+</p>
+<div class="card">
+  <h3 id="ask">詢問（僅支援的裝置）</h3>
+  <p>
+    透過列表右上角的<strong>閃光標記按鈕</strong>，可以用自己的話提問。
+    像「怎麼用？」「最近都儲存了什麼？」「未讀堆在哪裡了？」這樣問，
+    答案下方會列出<strong>參考的項目</strong>，可以直接開啟。
+  </p>
+  <p>
+    <strong>只在裝置內運作。</strong>問題和答案都不會傳到外部。
+    交給模型的，只是與問題相近的少數幾筆的標題、標籤、備註、網站名稱，
+    以及數量和常用標籤之類的統計。<strong>不會交出完整的網址。</strong>
+  </p>
+  <p>
+    <strong>可以接著問。</strong>像「那是什麼時候儲存的？」這樣，
+    能承接前面的對話來提問。想換話題時，請按左上角的
+    <strong>「新對話」</strong>，此前的對話會清空。
+    對話不會留在任何地方，關掉畫面也就沒了。
+  </p>
+  <p>
+    答案下方的<strong>「複製」</strong>可以原樣抄下來。
+    問起這個網站的位置時，會以可點擊的連結回答。
+    <strong>能變成可點擊連結的只有這個網站。</strong>
+    絕不會把你儲存的頁面網址寫進答案裡。
+  </p>
+  <p>
+    只有在支援 Apple Intelligence 的裝置（iOS 26 以上）
+    並已在 iOS 設定中啟用時，按鈕才會出現。
+    不支援的裝置上根本不會出現這個按鈕。
+  </p>
+</div>
+<div class="card">
+  <h3 id="summary">為文章產生摘要（僅支援的裝置）</h3>
+  <p>
+    在列表中<strong>長按文章 → 選擇「摘要」</strong>，畫面一開啟摘要就在那裡。
+    <strong>這不是用來閱讀的畫面。</strong>它是用來決定現在讀不讀的。
+  </p>
+  <p>
+    可以就這樣<strong>繼續就這篇文章提問</strong>。
+    答案的依據<strong>只有這一頁的內文</strong>，不摻入其他收藏。
+    沒能取到內文的頁面無法產生摘要（那時會如實告知）。
+  </p>
+  <p>
+    <strong>每篇文章的對話只保留最新 5 筆在裝置上。</strong>
+    這是為了日後再開啟同一篇文章時能接著問。
+    <strong>不會傳送到 iCloud。</strong>換裝置時不會帶過去。
+  </p>
+  <p>
+    保留下來的對話可在<strong>「詢問」畫面的左上角</strong>（對話框標記）查看。
+    可以一筆筆刪除，也可以用右上角的「全部刪除」一併清除。
+    在摘要畫面，左上角的垃圾桶只刪除這篇文章的對話。
+  </p>
+  <p>
+    與「詢問」一樣，只有支援 Apple Intelligence 的裝置（iOS 26 以上）
+    才會在選單中出現。
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/01-list.png" alt="列表。上方的分頁在全部 / 收藏 / 未讀之間切換，下方的標籤用來篩選。圓點表示未讀。" loading="lazy">
+    <figcaption>列表。上方的分頁在全部 / 收藏 / 未讀之間切換，下方的標籤用來篩選。圓點表示未讀。</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/08-ask.png" alt="「詢問」畫面。答案出現在問題下方，再下面是參考的項目。" loading="lazy">
+    <figcaption>詢問。答案下方列出參考的項目，可以直接開啟。只在裝置內運作。</figcaption>
+  </figure>
+</div>
+
+<h2 id="open">3. 開啟</h2>
+<div class="card">
+  <h3>點一下</h3>
+  <p>在 App 內開啟。讀完關掉後，回到列表的同一位置。開啟的那一刻即視為已讀。</p>
+</div>
+<div class="card">
+  <h3 id="reader">以閱讀器開啟</h3>
+  <p>
+    去掉廣告和多餘的東西，只顯示內文。<strong>預設是開啟的。</strong>
+    想看頁面原樣時，請關閉<strong>設定 → 顯示 →「以閱讀器開啟」</strong>。
+    不支援閱讀器的頁面，即使不關也會照原樣開啟。
+  </p>
+  <p>文字大小和背景顏色可以在開啟的畫面裡調整。</p>
+</div>
+<div class="card">
+  <h3>長按 → 在瀏覽器中開啟</h3>
+  <p>需要登入的頁面，或想用擴充功能的頁面，從這裡交給 Safari。</p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/02-menu.png" alt="長按出現的選單。編輯、摘要、收藏、排序、在瀏覽器中開啟、重新取得、刪除。" loading="lazy">
+    <figcaption>長按出現的選單。編輯、摘要、收藏、排序、在瀏覽器中開啟、重新取得、刪除。「摘要」只在支援的裝置上出現。</figcaption>
+  </figure>
+</div>
+
+<h2 id="edit">4. 整理</h2>
+<p><strong>長按 → 編輯</strong>，可以修改標題、標籤、備註和未讀狀態。</p>
+<ul>
+  <li><strong>標題</strong> — 取得失敗或抓到奇怪標題時，在這裡改。</li>
+  <li><strong>標籤</strong> — 輸入即可新增。用過的標籤會作為候選出現。大小寫視為相同。</li>
+  <li><strong>備註</strong> — 寫一行當初為什麼儲存，日後會很有用。</li>
+  <li><strong>縮圖</strong> — 也可以只把這一筆的圖片關掉。</li>
+</ul>
+<p>
+  <strong>排序</strong>是長按 → 排序 → 用手指拖曳。
+  正在篩選或搜尋時無法排序（只移動看得見的一部分，會破壞整體的順序）。
+</p>
+<p>
+  沒能取到標題的項目，用<strong>長按 → 重新取得</strong>再去取一次。
+</p>
+<div class="card">
+  <h3 id="tags">重新命名標籤、刪除標籤</h3>
+  <p>
+    <strong>設定 → 隱藏</strong>裡會列出正在使用的標籤和各自的數量。
+    <strong>把標籤那一列向左輕掃</strong>，會出現重新命名和刪除。
+    兩者都<strong>對全部項目一併生效</strong>。
+  </p>
+  <p>
+    <strong>刪除標籤不會刪除書籤。</strong>只是把該標籤拿掉而已。
+    標籤變多時，可用同一畫面的搜尋來縮小範圍。
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/03-edit.png" alt="編輯畫面。修正標題、加上標籤、寫下備註。用過的標籤會作為候選出現。" loading="lazy">
+    <figcaption>編輯畫面。修正標題、加上標籤、寫下備註。用過的標籤會作為候選出現。</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/04-reorder.png" alt="排序中。抓住右端的握把拖曳。" loading="lazy">
+    <figcaption>排序中。抓住右端的握把拖曳。</figcaption>
+  </figure>
+</div>
+
+<h2 id="hide">5. 刪除與隱藏</h2>
+<div class="card">
+  <h3>刪除</h3>
+  <p>
+    向左輕掃，或長按 → 刪除。
+    <strong>刪除之後，「還原」會出現幾秒。</strong>
+    按下就能復原。不去按它，那時才真的刪掉。
+  </p>
+</div>
+<div class="card">
+  <h3>隱藏</h3>
+  <p>
+    設定 → 隱藏。登錄<strong>網址或標題中包含的字串</strong>後，
+    命中的內容就會從列表中消失。也可以依標籤隱藏。
+    兩種方式都<strong>保留規則，隨時開關。</strong>
+  </p>
+</div>
+<p>
+  已隱藏的數量顯示在列表下方。點一下會開啟設定，從那裡進入「隱藏」。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/05-undo.png" alt="刪除之後。「還原」只出現幾秒。不去按它，那時才真的刪掉。" loading="lazy">
+    <figcaption>刪除之後。「還原」只出現幾秒。不去按它，那時才真的刪掉。</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/07-mute.png" alt="隱藏設定。網址或標題的字串，以及依標籤隱藏。可以保留規則只是關閉。" loading="lazy">
+    <figcaption>隱藏設定。網址或標題的字串，以及依標籤隱藏。可以保留規則只是關閉。</figcaption>
+  </figure>
+</div>
+
+<h2 id="backup">6. 留備份</h2>
+<p>
+  每週一次，把儲存的全部內容寫成 JSON，放進 iCloud 雲碟的 <strong>Kakesu 檔案夾</strong>。
+  可以從「檔案」App 開啟，刪掉 App 之後也還在。
+</p>
+<p>
+  備份保留<strong>最近 8 次</strong>，舊的會依序刪去。
+</p>
+<p>
+  <strong>設定 → 資料</strong>裡隨時可以<strong>匯出</strong>（送到哪裡由你決定）和
+  <strong>匯入</strong>。匯入時會跳過已有的網址，只補上沒有的，不會覆蓋。
+  同一畫面還會顯示最近一次自動備份的日期。
+</p>
+
+<h2 id="lock">7. 防止被人看到</h2>
+<p>
+  儲存的網址，就是瀏覽紀錄本身。
+  如果裝置有可能交到別人手上，請打開<strong>設定 → App 鎖定</strong>。
+  開啟 App 時會用 Face ID / Touch ID 或裝置密碼確認。
+</p>
+<ul>
+  <li><strong>預設是關閉的。</strong>需要的人再用就好。</li>
+  <li>
+    <strong>只是開啟連結再回來，不會追問。</strong>
+    離開 App 超過 1 分鐘時才確認。
+    每次閱讀都要刷臉，App 就沒法用了。
+  </li>
+  <li>
+    臉或指紋過不了時，<strong>用裝置密碼也能開啟。</strong>
+    只留生物辨識，會把自己關在門外。
+  </li>
+  <li>切換 App 的畫面上，不會映出列表內容。</li>
+</ul>
+<p>
+  裝置未設定密碼時無法使用此功能（設定項目會變成無法點擊）。
+</p>
+<p>
+  <strong>從分享表單儲存不會被鎖定攔住。</strong>
+  在儲存前插入確認，會漏掉那些你以為已經丟進去的東西。
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/06-settings.png" alt="設定中的安全。App 鎖定預設關閉。打開後，每次開啟 App 都會先確認。" loading="lazy">
+    <figcaption>設定中的安全。App 鎖定預設關閉。打開後，每次開啟 App 都會先確認。</figcaption>
+  </figure>
+</div>
+
+<h2 id="about">8. 閱讀條款與政策</h2>
+<p>
+  從設定的<strong>「關於本 App」</strong>，可以開啟
+  <a href="terms.html">使用條款</a>和<a href="privacy.html">隱私權政策</a>。
+  同一處還會顯示 App 版本，聯絡時請一併告知。
+</p>
+
+<h2 id="widget">從主畫面想起來</h2>
+<p>
+  把小工具放到主畫面，就會顯示<strong>未讀數量</strong>。
+  小尺寸列出 1 筆、中尺寸最多 3 筆最近的標題。
+  點一下會開啟 App。
+</p>
+<p>
+  <strong>開啟 App 鎖定期間，只顯示數量。</strong>
+  標題和網站名稱都不會出現在小工具上。
+  因為主畫面是沒有鎖、會被人看到的地方。
+</p>
+
+<h2 id="shortcuts">從捷徑使用</h2>
+<ul>
+  <li><strong>儲存書籤</strong> — 交給它一個網址就會儲存。標題會在下次開啟 App 時補上。</li>
+  <li><strong>搜尋書籤</strong> — 從標題、網址、標籤、備註、內文中尋找。<strong>被隱藏的內容不會回傳</strong>（列表裡看不到的東西卻能從捷徑冒出來，隱藏就失去意義了）。</li>
+</ul>
+<p>
+  在捷徑 App 的「App」裡選擇 Kakesu 就能找到。也可以放進自動化裡。
+</p>
+
+<h2 id="sync">在另一台裝置上接著讀</h2>
+<p>
+  只要登入的是同一個 Apple 帳號，內容就會直接出現。
+  沒有建立帳號這一步。想停止同步時，請到
+  iOS 的「設定」→ Apple 帳號 → iCloud，把 Kakesu 關掉。
+</p>
+
+<h2 id="trouble">遇到問題時</h2>
+<ul>
+  <li><strong>分享表單裡沒有</strong> — 請在分享表單的「更多」裡把 Kakesu 打開。</li>
+  <li><strong>標題還是網址</strong> — 用 JavaScript 繪製的頁面有時取不到標題。請在編輯畫面修改，或試試重新取得。</li>
+  <li><strong>另一台裝置上沒有</strong> — 請查看設定裡的 iCloud 狀態。未登入時那裡會顯示出來。</li>
+</ul>
+
+<h2>聯絡</h2>
+<p>
+  這裡沒寫到的，歡迎透過<a href="contact.html">聯絡頁面</a>告訴我們。
+</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="features.html">功能一覽</a>
+      <a href="guide.html">使用方式</a>
+      <a href="terms.html">使用條款</a>
+      <a href="privacy.html">隱私權政策</a>
+      <a href="contact.html">聯絡</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>

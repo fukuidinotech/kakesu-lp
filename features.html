@@ -4,12 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>機能一覧 — Kakesu</title>
-<meta name="description" content="Kakesu の機能一覧。保存、検索、タグ、メモ、未読、お気に入り、並べ替え、ミュート、iCloud 同期、JSON の控え。">
+<meta name="description" content="Kakesu の機能一覧。保存、検索、タグ、メモ、未読、お気に入り、並べ替え、要約、ミュート、リーダー、ウィジェット、iCloud 同期、JSON の控え。">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/features.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/features.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/features.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/features.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/features.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/features.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/features.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/features.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/features.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/features.html">
 <link rel="icon" href="icon-512.png">
 <link rel="apple-touch-icon" href="icon-512.png">
 <link rel="stylesheet" href="style.css">
+<!--/chrome:alt-->
 </head>
 <body>
+<!--chrome:head-->
 <header class="site-header">
   <div class="inner">
     <a class="brand" href="index.html">
@@ -22,8 +35,22 @@
       <a href="guide.html">使い方</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
+    <details class="langpick">
+      <summary aria-label="言語を選ぶ">日本語</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="features.html" aria-current="true">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="en/features.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="de/features.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="fr/features.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="es/features.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="ko/features.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="zh-Hans/features.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="zh-Hant/features.html">繁體中文</a></li>
+      </ul>
+    </details>
   </div>
 </header>
+<!--/chrome:head-->
 
 <div class="wrap">
 
@@ -53,13 +80,16 @@
   <tr><th>未読の印</th><td>開くと既読になります。編集画面で戻すこともできます。</td></tr>
   <tr><th>お気に入り</th><td>長押しメニューか、右スワイプで。</td></tr>
   <tr><th>聞く</th><td>貯めたものの傾向や使い方を、ことばで尋ねられます。続けて聞けば前のやり取りを踏まえて答えます。端末の中だけで動き、外へは送りません。<a class="row-link" href="guide.html#ask">使い方</a></td></tr>
+  <tr><th>記事を要約する</th><td>長押しメニューの「要約する」から。そのページの本文だけを見て要約します。読むかどうかを決めるためのものです。<a class="row-link" href="guide.html#summary">使い方</a></td></tr>
+  <tr><th>記事について続けて聞く</th><td>要約のあと、その記事について聞けます。答えの根拠はその記事の本文だけで、ほかに貯めたものは混ぜません。</td></tr>
+  <tr><th>記事の会話が残る</th><td>記事ごとの会話は、新しいものから5件だけ端末に残ります。「聞く」の画面から開けます。iCloud には送りません。</td></tr>
 </table>
 
 <h2>整える <a class="sec-link" href="guide.html#edit">使い方を見る</a></h2>
 <table class="features">
   <tr><th>タイトルの編集</th><td>取得に失敗したときや、変なタイトルを掴んだときに直せます。</td></tr>
   <tr><th>タグ</th><td>いくつでも。過去に使ったタグが候補に出ます。大文字と小文字は同じ扱いです。</td></tr>
-  <tr><th>タグの名前変更・削除</th><td>設定から、全項目のタグをまとめて付け替えられます。<a class="row-link" href="guide.html#hide">使い方</a></td></tr>
+  <tr><th>タグの名前変更・削除</th><td>設定の「ミュート」から、全項目のタグをまとめて付け替えられます。削除してもブックマークは消えません。<a class="row-link" href="guide.html#tags">使い方</a></td></tr>
   <tr><th>メモ</th><td>なぜ保存したのかを書いておけます。検索の対象になります。</td></tr>
   <tr><th>並べ替え</th><td>指でドラッグ。全件を表示しているときだけできます。</td></tr>
   <tr><th>取り直す</th><td>タイトルを取れなかった項目を、もう一度取りに行かせます。</td></tr>
@@ -70,6 +100,7 @@
 <h2>開く <a class="sec-link" href="guide.html#open">使い方を見る</a></h2>
 <table class="features">
   <tr><th>アプリ内で開く</th><td>タップで開き、閉じると一覧の同じ場所に戻ります。</td></tr>
+  <tr><th>リーダーで開く</th><td>広告や余計な表示を除いて本文だけを出します。<strong>既定はオン</strong>で、設定の「表示」から切れます。対応していないページはそのまま開きます。</td></tr>
   <tr><th>ブラウザで開く</th><td>ログインや拡張機能が要るページは、長押しメニューから Safari へ。</td></tr>
 </table>
 
@@ -79,7 +110,7 @@
   <tr><th>文字列でミュート</th><td>URL やタイトルに含まれる文字列を登録して隠します。</td></tr>
   <tr><th>タグでミュート</th><td>そのタグが付いた項目を隠します。</td></tr>
   <tr><th>登録を残したままオフ</th><td>ミュートは消さずに切れます。一時的に外したいときのために。</td></tr>
-  <tr><th>隠している件数の表示</th><td>一覧の下に出ます。押すとミュートの設定へ飛べます。</td></tr>
+  <tr><th>隠している件数の表示</th><td>一覧の下に出ます。押すと設定が開きます。</td></tr>
 </table>
 
 <h2>持ち運ぶ・控える <a class="sec-link" href="guide.html#backup">使い方を見る</a></h2>
@@ -97,13 +128,21 @@
   <tr><th>App Switcher の覆い</th><td>アプリを切り替える画面に、一覧の中身が写り込まないようにします。</td></tr>
 </table>
 
+<h2>ほかの場所から使う</h2>
+<table class="features">
+  <tr><th>未読のウィジェット</th><td>ホーム画面に未読の件数を出します。小さい方は1件、中くらいの方は3件まで、直近のタイトルも並びます。</td></tr>
+  <tr><th>ロック中のウィジェット</th><td>アプリのロックをオンにしているあいだは、<strong>件数だけ</strong>を出します。タイトルもサイト名も出しません。</td></tr>
+  <tr><th>ショートカット</th><td>「ブックマークを保存」と「ブックマークを検索」を、ショートカットアプリや Siri から呼べます。</td></tr>
+  <tr><th>ショートカットとミュート</th><td>検索は一覧と同じ結果を返します。ミュートして隠したものは返しません。</td></tr>
+</table>
+
 <h2>そのほか</h2>
 <table class="features">
   <tr><th>ダークモード</th><td>iOS の設定に従います。</td></tr>
   <tr><th>文字サイズ</th><td>iOS の文字サイズ設定に追従します。</td></tr>
   <tr><th>対応言語</th><td>日本語・英語・ドイツ語・フランス語・スペイン語・韓国語・中国語（簡体字／繁体字）。</td></tr>
   <tr><th>規約とポリシー</th><td>設定の「このアプリについて」から、利用規約とプライバシーポリシーを開けます。</td></tr>
-  <tr><th>対応OS</th><td>iOS 17.0 以降。「聞く」は Apple Intelligence に対応した端末（iOS 26 以降）でのみ使えます。</td></tr>
+  <tr><th>対応OS</th><td>iOS 17.0 以降。「聞く」と「要約する」は Apple Intelligence に対応した端末（iOS 26 以降）でのみ使えます。</td></tr>
 </table>
 
 <p>
@@ -112,6 +151,7 @@
 
 </div>
 
+<!--chrome:foot-->
 <footer class="site-footer">
   <div class="inner">
     <nav>
@@ -125,5 +165,6 @@
     <p class="copy">© 2026 Toru Fukui</p>
   </div>
 </footer>
+<!--/chrome:foot-->
 </body>
 </html>

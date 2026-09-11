@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad — Kakesu</title>
+<meta name="description" content="La política de privacidad de Kakesu. El desarrollador no recopila ningún dato de los usuarios.">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/es/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/privacy.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/privacy.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/privacy.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="features.html">Funciones</a>
+      <a href="guide.html">Guía</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="Elegir idioma">Español</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="../privacy.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="../en/privacy.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/privacy.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/privacy.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="privacy.html" aria-current="true">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/privacy.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/privacy.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/privacy.html">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>Política de privacidad</h1>
+</header>
+
+<h2>En resumen</h2>
+<p>
+<strong>El desarrollador no recopila ningún dato de los usuarios.</strong>
+Kakesu no tiene ningún servidor del desarrollador. No lleva publicidad, ni herramientas de analítica, ni SDK de terceros.
+</p>
+
+<h2>Qué guarda la app</h2>
+<p>
+Las URL que usted guarda, junto con títulos, etiquetas, notas, el estado de no leído y favorito, y los ajustes de la app.
+Para que la búsqueda pueda desenterrarlas, guarda además
+<strong>el principio del texto de la página guardada (hasta 4.000 caracteres)</strong>.
+Todo ello reside <strong>en su dispositivo</strong> y en <strong>su propio iCloud</strong>
+(una base de datos privada de CloudKit).
+</p>
+<p>
+Por el diseño de Apple, el desarrollador no puede acceder a esa base privada.
+No puede ver su contenido, ni extraerlo, ni entregarlo a terceros.
+</p>
+
+<h2>Qué conexiones establece la app</h2>
+<p>
+Kakesu solo establece conexión de red en estos casos.
+</p>
+<ul>
+  <li>
+    <strong>Al ir a buscar información de una página guardada.</strong>
+    Para obtener el título, la miniatura, el favicon y el texto que sirve para la búsqueda, la app accede
+    <strong>directamente al servidor de la página guardada</strong>.
+    Esa conexión no pasa por el desarrollador. Ahora bien,
+    <strong>puede quedar un registro del acceso en el lado de quien gestiona ese sitio</strong>
+    (igual que si hubiera abierto la página en un navegador corriente).
+  </li>
+  <li>
+    <strong>Sincronización con iCloud y copias de seguridad.</strong>
+    Se hacen contra el iCloud de Apple. Su tratamiento se rige por la
+    <a href="https://www.apple.com/legal/privacy/">política de privacidad de Apple</a>.
+  </li>
+</ul>
+<p>
+Abrir una página dentro de la app usa el SFSafariViewController de Apple.
+Por omisión se abre en el Lector, lo que ocurre dentro de ese mismo mecanismo.
+Las cookies y el historial quedan separados de Safari, y el desarrollador no puede obtener el contenido.
+</p>
+
+<h2>La copia en iCloud Drive</h2>
+<p>
+Una vez por semana, todo lo guardado se escribe como archivo JSON en su iCloud Drive
+(la carpeta Kakesu de la app Archivos).
+Es una copia puesta en un sitio que usted puede leer; no se envía al desarrollador.
+</p>
+
+<h2>Publicidad, analítica, seguimiento</h2>
+<p>
+Nada de eso. No se muestra publicidad. No hay compras dentro de la app.
+No se incluye ninguna herramienta de analítica que mida el uso.
+Nunca se le pedirá el permiso de App Tracking Transparency.
+</p>
+
+<h2>«Preguntar» (Apple Intelligence)</h2>
+<p>
+En los dispositivos compatibles puede hacerle preguntas a la app sobre los marcadores que ha reunido.
+Esta función <strong>funciona únicamente con el modelo en el dispositivo de iOS (Apple Intelligence).</strong>
+Ni las preguntas ni las respuestas se envían a un servidor del desarrollador ni a ningún servidor externo.
+</p>
+<p>
+Lo que se entrega al modelo, tras acotar a seis elementos como máximo entre los más cercanos a la pregunta,
+son cinco cosas: título, etiquetas, nota, nombre de host del sitio y si está sin leer.
+A eso se añaden <strong>cifras agregadas</strong> como recuentos, sus etiquetas más usadas
+y los sitios desde los que más guarda. <strong>Las URL completas no se entregan nunca.</strong>
+</p>
+<p>
+Al repreguntar, <strong>el intercambio hasta ese punto (preguntas y respuestas) también se entrega al mismo modelo.</strong>
+Es para mantener el hilo; solo se pasan los últimos pares. Esto tampoco sale del dispositivo.
+Las preguntas sobre el conjunto de la colección tampoco se almacenan en el dispositivo.
+Pulse «Nueva conversación», o cierre la pantalla, y desaparecen.
+</p>
+<p>
+<strong>Para el resumen de un solo artículo se entrega al modelo del dispositivo el texto de esa página (solo su principio).</strong>
+Lo único en que se apoya es el texto de ese artículo; no se mezcla nada más de lo guardado.
+También aquí el texto no sale del dispositivo.
+</p>
+<p>
+<strong>Las conversaciones sobre un solo artículo son lo único que queda en su dispositivo: las cinco más recientes.</strong>
+Es para que pueda retomar donde lo dejó al volver a abrir el mismo artículo.
+<strong>No van a iCloud</strong>, ni al desarrollador, ni a ningún servidor externo.
+Bórrelas desde «Conversaciones de artículos», a la que se llega desde la pantalla Preguntar, una a una o de golpe con «Borrar todas».
+Desde la pantalla del resumen puede borrar solo la conversación de ese artículo.
+Al borrar la app se van con ella.
+</p>
+<p>
+La función solo está disponible en dispositivos compatibles con Apple Intelligence y con este activado en los ajustes de iOS.
+En los demás no aparece siquiera el punto de entrada.
+</p>
+
+<h2>Face ID / Touch ID</h2>
+<p>
+Con el bloqueo de la app activado, al abrirla se le verifica mediante Face ID / Touch ID,
+o el código del dispositivo.
+</p>
+<p>
+<strong>Los datos de rostro y huella los trata iOS, en el dispositivo.</strong>
+Esta app no los obtiene. Nunca se envían al desarrollador.
+Lo único que esta app recibe es si la comprobación se ha superado.
+</p>
+<p>
+Mientras el bloqueo está activado, <strong>el widget de la pantalla de inicio tampoco muestra títulos ni nombres de sitios</strong>
+(solo el número de no leídos).
+La pantalla de inicio queda a la vista, sin cerradura delante.
+</p>
+
+<h2>Información de fallos</h2>
+<p>
+Solo si usted ha activado «Compartir con desarrolladores» en los ajustes de iOS,
+Apple puede facilitar al desarrollador información anónima sobre fallos.
+Es un mecanismo de Apple, no algo que Kakesu envíe por su cuenta.
+Esa información no contiene ninguna de las URL ni de las notas que ha guardado.
+</p>
+
+<h2>Uso por menores</h2>
+<p>
+Kakesu no está hecha para una franja de edad concreta
+ni recopila conscientemente datos personales de menores.
+</p>
+
+<h2>Borrado de sus datos</h2>
+<ul>
+  <li>Los datos del dispositivo desaparecen al borrar la app.</li>
+  <li>Lo sincronizado con iCloud se borra en Ajustes de iOS → cuenta de Apple → iCloud.</li>
+  <li>Las copias de iCloud Drive se borran en la app Archivos.</li>
+</ul>
+
+<h2>Cambios en esta política</h2>
+<p>
+Si el contenido cambia, esta página se actualiza y se reescribe la fecha del final.
+</p>
+
+<h2>Contacto</h2>
+<p>
+<a href="mailto:fukuidinotech@gmail.com">fukuidinotech@gmail.com</a>
+</p>
+
+<p class="updated">Última actualización: 11 de septiembre de 2026</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="features.html">Funciones</a>
+      <a href="guide.html">Guía</a>
+      <a href="terms.html">Términos</a>
+      <a href="privacy.html">Privacidad</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>

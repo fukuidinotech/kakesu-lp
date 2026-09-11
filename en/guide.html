@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide — Kakesu</title>
+<meta name="description" content="How to use Kakesu: saving, finding, summarizing, opening, tidying up, hiding, and keeping a backup.">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/guide.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/guide.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/guide.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/guide.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/guide.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html" aria-current="page">Guide</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="Choose a language">English</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="../guide.html">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="guide.html" aria-current="true">English</a></li>
+        <li><a lang="de" hreflang="de" href="../de/guide.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/guide.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/guide.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/guide.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/guide.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/guide.html">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>Guide</h1>
+</header>
+
+<h2 id="save">1. Saving</h2>
+<p>There are two ways in. With both, the save finishes the moment you tap.</p>
+<div class="card">
+  <h3>From the share sheet</h3>
+  <p>
+    Open a page in Safari or elsewhere, tap the share button, and choose <strong>Kakesu</strong>.
+    If it is not in the list, turn Kakesu on from “More” in the share sheet.
+  </p>
+  <p>
+    By the time you have chosen it, the save is done. The screen that follows lets you
+    <strong>add tags and a note on the spot</strong>, but you can close it without adding anything
+    and fill them in later from the edit screen. If you tapped by mistake,
+    <strong>“Undo”</strong> at the top left removes just the item you have created.
+  </p>
+</div>
+<div class="card">
+  <h3>Paste a copied URL</h3>
+  <p>
+    With a URL on the clipboard, open the app and tap the <strong>paste button at the top right</strong>.
+  </p>
+</div>
+<p>
+  <strong>Titles and thumbnails fill themselves in afterwards.</strong>
+  Right after saving you will see only URLs, but the app fetches them one by one while it is open.
+  Saving somewhere with bad reception does not make the save itself fail.
+</p>
+<p>
+  Saving the same page twice does not add a second copy
+  (tracking parameters such as <code>?utm_source=</code> and a difference of <code>www.</code> are ignored).
+</p>
+
+<h2 id="find">2. Finding</h2>
+<ul>
+  <li><strong>Search</strong> — titles, URLs, tags, notes, and <strong>the page text</strong>, all at once. The last five searches you ran stay as suggestions.</li>
+  <li><strong>Narrow by tag</strong> — tap a tag above the list and only that tag remains. Tap again to clear it.</li>
+  <li><strong>Split by tab</strong> — All / Favorites / Unread. Whichever you pick is still there next time.</li>
+</ul>
+<p>
+  Unread is marked with a <strong>dot</strong>, favorites with a <strong>star</strong>.
+</p>
+<p>
+  <strong>The page text is searched, not only the title.</strong>
+  After saving, the start of the text is stored alongside the title,
+  so a word you remember from the body will dig the page out even when the title will not.
+</p>
+<div class="card">
+  <h3 id="ask">Ask (supported devices only)</h3>
+  <p>
+    The <strong>sparkle button</strong> at the top right of the list lets you ask in plain words.
+    Ask things like “How do I use this?”, “What have I saved lately?”, or “Where is my unread piling up?”,
+    and the <strong>items it referred to</strong> are listed under the answer, ready to open.
+  </p>
+  <p>
+    <strong>It runs entirely on your device.</strong> Neither your question nor the answer is sent anywhere.
+    What it hands the model is a handful of items closest to the question — title, tags, note, site name —
+    plus counts and your most-used tags. <strong>Full URLs are never handed over.</strong>
+  </p>
+  <p>
+    <strong>You can keep asking.</strong> A follow-up like “When did I save that?” is understood
+    in light of what came before. To change the subject, tap
+    <strong>“New conversation”</strong> at the top left; everything up to then is cleared.
+    The conversation is not stored anywhere, so closing the screen clears it too.
+  </p>
+  <p>
+    <strong>“Copy”</strong> under the answer takes it as it stands.
+    Ask where this site is and the answer comes back as a link you can tap.
+    <strong>Only this site ever becomes a tappable link.</strong>
+    The URLs of pages you saved are never written into an answer.
+  </p>
+  <p>
+    The button appears only on devices that support Apple Intelligence (iOS 26 or later),
+    with it enabled in iOS Settings. On other devices there is no button at all.
+  </p>
+</div>
+<div class="card">
+  <h3 id="summary">Summarizing an article (supported devices only)</h3>
+  <p>
+    <strong>Press and hold an article, then choose “Summary”</strong>, and the summary is there as it opens.
+    <strong>It is not a screen for reading.</strong> It is for deciding whether to read now.
+  </p>
+  <p>
+    From there you can <strong>keep asking about that article</strong>.
+    The answers rest on <strong>that page's text alone</strong>; nothing else you saved is mixed in.
+    A page whose text could not be fetched cannot be summarized, and says so.
+  </p>
+  <p>
+    <strong>The five most recent article conversations stay on your device</strong>,
+    so you can pick up where you left off when you open the same article again.
+    <strong>They are not sent to iCloud</strong>, and they do not carry over to a new phone.
+  </p>
+  <p>
+    You will find the ones that remain at the <strong>top left of the Ask screen</strong> (the speech-bubble mark).
+    Delete them one at a time, or all at once with “Delete All” at the top right.
+    From the summary screen, the bin at the top left deletes just that article's conversation.
+  </p>
+  <p>
+    Like Ask, it appears in the menu only on devices that support Apple Intelligence (iOS 26 or later).
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/01-list.png" alt="The list. Tabs at the top switch between All, Favorites, and Unread; the tags below narrow it down. The dot means unread." loading="lazy">
+    <figcaption>The list. Tabs at the top switch between All, Favorites, and Unread; the tags below narrow it down. The dot means unread.</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/08-ask.png" alt="The Ask screen. The answer appears under your question, with the items it referred to listed below." loading="lazy">
+    <figcaption>Ask. The items behind the answer are listed underneath, ready to open. It runs entirely on your device.</figcaption>
+  </figure>
+</div>
+
+<h2 id="open">3. Opening</h2>
+<div class="card">
+  <h3>Tap</h3>
+  <p>It opens inside the app. Close it when you are done and you are back at the same spot in the list. Opening it marks it read.</p>
+</div>
+<div class="card">
+  <h3 id="reader">Open in Reader</h3>
+  <p>
+    Shows just the text, without ads or clutter. <strong>It is on by default.</strong>
+    To see pages as they are, switch off <strong>Settings → Display → “Open in Reader”</strong>.
+    Pages that do not support Reader open as usual either way.
+  </p>
+  <p>Text size and background colour are changed inside the reader itself.</p>
+</div>
+<div class="card">
+  <h3>Press and hold → Open in Browser</h3>
+  <p>Pages that need a login, or an extension you use, are handed to Safari from here.</p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/02-menu.png" alt="The press-and-hold menu: Edit, Summary, Favorite, Reorder, Open in Browser, Fetch Again, Delete." loading="lazy">
+    <figcaption>The press-and-hold menu: Edit, Summary, Favorite, Reorder, Open in Browser, Fetch Again, Delete. “Summary” appears only on supported devices.</figcaption>
+  </figure>
+</div>
+
+<h2 id="edit">4. Tidying up</h2>
+<p><strong>Press and hold → Edit</strong> to change the title, tags, note, and unread state.</p>
+<ul>
+  <li><strong>Title</strong> — fix it here when the fetch failed, or the page handed over something strange.</li>
+  <li><strong>Tags</strong> — type to add. Tags you have used before are suggested. Upper and lower case count as the same.</li>
+  <li><strong>Note</strong> — a single line about why you saved it pays off later.</li>
+  <li><strong>Thumbnail</strong> — the image can be turned off for this one item.</li>
+</ul>
+<p>
+  <strong>Reordering</strong> is press and hold → Reorder → drag with a finger.
+  You cannot reorder while narrowing or searching (moving part of what you can see would break the order of the whole).
+</p>
+<p>
+  For an item whose title never arrived, <strong>press and hold → Fetch Again</strong> sends the app back out.
+</p>
+<div class="card">
+  <h3 id="tags">Renaming and deleting tags</h3>
+  <p>
+    <strong>Settings → Mute</strong> lists the tags you are using, with counts.
+    <strong>Swipe a tag row to the left</strong> for rename and delete.
+    Both <strong>apply across every item at once</strong>.
+  </p>
+  <p>
+    <strong>Deleting a tag does not delete the bookmarks.</strong> It only takes the tag off them.
+    Once you have a lot of tags, the search on that same screen narrows them down.
+  </p>
+</div>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/03-edit.png" alt="The edit screen: fix the title, add tags, write a note. Tags you have used before are offered as suggestions." loading="lazy">
+    <figcaption>The edit screen: fix the title, add tags, write a note. Tags you have used before are offered as suggestions.</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/04-reorder.png" alt="Reordering. Take hold of the handle on the right and drag." loading="lazy">
+    <figcaption>Reordering. Take hold of the handle on the right and drag.</figcaption>
+  </figure>
+</div>
+
+<h2 id="hide">5. Deleting and hiding</h2>
+<div class="card">
+  <h3>Deleting</h3>
+  <p>
+    Swipe left, or press and hold → Delete.
+    <strong>“Undo” appears for a few seconds right after.</strong>
+    Tap it and the item comes back. Leave it alone and only then is the item gone.
+  </p>
+</div>
+<div class="card">
+  <h3>Hiding (mute)</h3>
+  <p>
+    Settings → Mute. Register <strong>a string found in the URL or title</strong>
+    and anything matching it disappears from the list. Whole tags can be hidden too.
+    Either way, <strong>the rule stays and you can switch it on and off.</strong>
+  </p>
+</div>
+<p>
+  The count of hidden items is shown beneath the list. Tap it and Settings opens, where “Mute” is waiting.
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/05-undo.png" alt="Just after deleting. “Undo” appears for a few seconds. Leave it alone and only then is the item gone." loading="lazy">
+    <figcaption>Just after deleting. “Undo” appears for a few seconds. Leave it alone and only then is the item gone.</figcaption>
+  </figure>
+  <figure>
+    <img src="../shots/07-mute.png" alt="Mute settings: strings found in the URL or title, and whole tags. A rule can be switched off without deleting it." loading="lazy">
+    <figcaption>Mute settings: strings found in the URL or title, and whole tags. A rule can be switched off without deleting it.</figcaption>
+  </figure>
+</div>
+
+<h2 id="backup">6. Keeping a copy</h2>
+<p>
+  Once a week, everything you have saved is written as JSON into the <strong>Kakesu folder</strong>
+  in iCloud Drive. You can open it from the Files app, and it stays after the app is deleted.
+</p>
+<p>
+  The <strong>last eight</strong> backups are kept; older ones drop off.
+</p>
+<p>
+  <strong>Settings → Data</strong> offers <strong>export</strong> (you choose where it goes) and
+  <strong>import</strong> at any time. Importing skips URLs that are already there and adds only what is missing.
+  It never overwrites. The same screen shows the date of the last automatic backup.
+</p>
+
+<h2 id="lock">7. Keeping it from prying eyes</h2>
+<p>
+  A saved URL is your browsing history, plainly.
+  If your phone passes through other people's hands, turn on <strong>Settings → App Lock</strong>.
+  Opening the app then asks for Face ID / Touch ID, or your device passcode.
+</p>
+<ul>
+  <li><strong>It is off by default.</strong> Use it only if you need it.</li>
+  <li>
+    <strong>Coming back from a link you just opened does not trigger it.</strong>
+    Only an absence of a minute or more does.
+    Face ID on every single read would make the app unusable.
+  </li>
+  <li>
+    If your face or finger will not go through, <strong>your device passcode opens it too.</strong>
+    Biometrics alone would let you lock yourself out.
+  </li>
+  <li>The contents of your list do not appear in the app-switching screen.</li>
+</ul>
+<p>
+  Without a passcode set on the device the feature cannot be used (the setting becomes untappable).
+</p>
+<p>
+  <strong>App Lock never applies to saving from the share sheet.</strong>
+  A prompt in front of the save would lose the very pages you meant to toss in.
+</p>
+
+<div class="shots">
+  <figure>
+    <img src="../shots/06-settings.png" alt="Security settings. App Lock is off by default; turn it on and the app asks when you open it." loading="lazy">
+    <figcaption>Security settings. App Lock is off by default; turn it on and the app asks when you open it.</figcaption>
+  </figure>
+</div>
+
+<h2 id="about">8. Reading the terms and the policy</h2>
+<p>
+  <strong>“About”</strong> in Settings opens the
+  <a href="terms.html">terms of use</a> and the <a href="privacy.html">privacy policy</a>.
+  The app version is in the same place — please include it when you get in touch.
+</p>
+
+<h2 id="widget">Remembering from the Home Screen</h2>
+<p>
+  Put the widget on your Home Screen and it shows <strong>how many are unread</strong>.
+  The small size lists one recent title, the medium size up to three.
+  Tapping it opens the app.
+</p>
+<p>
+  <strong>While App Lock is on, it shows the count and nothing else.</strong>
+  No titles, no site names in the widget.
+  The Home Screen is on show without a lock in front of it.
+</p>
+
+<h2 id="shortcuts">Using it from Shortcuts</h2>
+<ul>
+  <li><strong>Save Bookmark</strong> — hand it a URL and it is saved. The title fills in the next time you open the app.</li>
+  <li><strong>Search Bookmarks</strong> — searches titles, URLs, tags, notes, and page text. <strong>Muted items are not returned</strong> (something hidden from the list turning up in Shortcuts would defeat the point of hiding it).</li>
+</ul>
+<p>
+  Pick Kakesu under “Apps” in the Shortcuts app to find them. They work in automations too.
+</p>
+
+<h2 id="sync">Carrying on from another device</h2>
+<p>
+  As long as you are signed in to the same Apple Account, it is simply there.
+  There is no account to create. To stop syncing, turn Kakesu off under
+  iOS Settings → Apple Account → iCloud.
+</p>
+
+<h2 id="trouble">When something will not work</h2>
+<ul>
+  <li><strong>Not in the share sheet</strong> — turn Kakesu on from “More” in the share sheet.</li>
+  <li><strong>The title is still a URL</strong> — pages drawn with JavaScript sometimes hand over no title. Fix it in the edit screen, or try Fetch Again.</li>
+  <li><strong>Not showing up on the other device</strong> — check the iCloud status in Settings. If you are not signed in, it says so there.</li>
+</ul>
+
+<h2>Contact</h2>
+<p>
+  For anything not written here, the <a href="contact.html">contact page</a> is the way.
+</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>

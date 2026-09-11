@@ -4,12 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>使い方 — Kakesu</title>
-<meta name="description" content="Kakesu の使い方。保存する、見つける、開く、整える、隠す、控えを取る。">
+<meta name="description" content="Kakesu の使い方。保存する、見つける、要約する、開く、整える、隠す、控えを取る。">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/guide.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/guide.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/guide.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/guide.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/guide.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/guide.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/guide.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/guide.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/guide.html">
 <link rel="icon" href="icon-512.png">
 <link rel="apple-touch-icon" href="icon-512.png">
 <link rel="stylesheet" href="style.css">
+<!--/chrome:alt-->
 </head>
 <body>
+<!--chrome:head-->
 <header class="site-header">
   <div class="inner">
     <a class="brand" href="index.html">
@@ -22,8 +35,22 @@
       <a href="guide.html" aria-current="page">使い方</a>
       <a href="contact.html">お問い合わせ</a>
     </nav>
+    <details class="langpick">
+      <summary aria-label="言語を選ぶ">日本語</summary>
+      <ul>
+        <li><a lang="ja" hreflang="ja" href="guide.html" aria-current="true">日本語</a></li>
+        <li><a lang="en" hreflang="en" href="en/guide.html">English</a></li>
+        <li><a lang="de" hreflang="de" href="de/guide.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="fr/guide.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="es/guide.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="ko/guide.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="zh-Hans/guide.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="zh-Hant/guide.html">繁體中文</a></li>
+      </ul>
+    </details>
   </div>
 </header>
+<!--/chrome:head-->
 
 <div class="wrap">
 
@@ -105,6 +132,32 @@
     対応していない端末では、ボタンそのものが出ません。
   </p>
 </div>
+<div class="card">
+  <h3 id="summary">記事を要約する（対応端末のみ）</h3>
+  <p>
+    一覧で記事を<strong>長押し →「要約する」</strong>を選ぶと、開いてすぐ要約が出ます。
+    <strong>読むための画面ではありません。</strong>いま読むかどうかを決めるためのものです。
+  </p>
+  <p>
+    そのまま<strong>その記事について続けて聞けます</strong>。
+    答えの根拠は<strong>そのページの本文だけ</strong>で、ほかに貯めたものは混ぜません。
+    本文を取れていないページは要約できません（そのときはその旨を出します）。
+  </p>
+  <p>
+    <strong>記事ごとの会話は、新しいものから5件だけ端末に残ります。</strong>
+    あとで同じ記事を開いたときに続きから聞けるようにするためです。
+    <strong>iCloud には送りません。</strong>機種変更では引き継がれません。
+  </p>
+  <p>
+    残った会話は<strong>「聞く」の画面の左上</strong>（吹き出しの印）から一覧できます。
+    1件ずつ消すことも、右上の「すべて消す」でまとめて消すこともできます。
+    要約の画面からは、左上のごみ箱でその記事の会話だけを消せます。
+  </p>
+  <p>
+    「聞く」と同じく、Apple Intelligence に対応した端末（iOS 26 以降）でだけ
+    メニューに出ます。
+  </p>
+</div>
 
 <div class="shots">
   <figure>
@@ -123,14 +176,23 @@
   <p>アプリの中で開きます。読み終えて閉じると、一覧の同じ場所に戻ります。開いた時点で既読になります。</p>
 </div>
 <div class="card">
+  <h3 id="reader">リーダーで開く</h3>
+  <p>
+    広告や余計な表示を除いて、本文だけを出します。<strong>既定はオンです。</strong>
+    そのままのページを見たいときは、<strong>設定 → 表示 →「リーダーで開く」</strong>を切ってください。
+    リーダーに対応していないページは、切っていなくてもそのまま開きます。
+  </p>
+  <p>文字の大きさや背景の色は、開いた画面の中で変えられます。</p>
+</div>
+<div class="card">
   <h3>長押し → ブラウザで開く</h3>
   <p>ログインが必要なページや、拡張機能を使いたいページはこちらから Safari に渡します。</p>
 </div>
 
 <div class="shots">
   <figure>
-    <img src="shots/02-menu.png" alt="長押しで出るメニュー。編集・お気に入り・並べ替え・ブラウザで開く・取り直す・削除。" loading="lazy">
-    <figcaption>長押しで出るメニュー。編集・お気に入り・並べ替え・ブラウザで開く・取り直す・削除。</figcaption>
+    <img src="shots/02-menu.png" alt="長押しで出るメニュー。編集・要約する・お気に入り・並べ替え・ブラウザで開く・取り直す・削除。" loading="lazy">
+    <figcaption>長押しで出るメニュー。編集・要約する・お気に入り・並べ替え・ブラウザで開く・取り直す・削除。「要約する」は対応端末でだけ出ます。</figcaption>
   </figure>
 </div>
 
@@ -149,6 +211,18 @@
 <p>
   タイトルが取れなかった項目は、<strong>長押し → 取り直す</strong>でもう一度取りに行きます。
 </p>
+<div class="card">
+  <h3 id="tags">タグの名前を変える・タグを消す</h3>
+  <p>
+    <strong>設定 → ミュート</strong>に、使っているタグが件数つきで並びます。
+    <strong>タグの行を左にスワイプ</strong>すると、名前の変更と削除が出ます。
+    どちらも<strong>全項目にまとめて効きます</strong>。
+  </p>
+  <p>
+    <strong>タグを削除しても、ブックマークは消えません。</strong>そのタグが外れるだけです。
+    タグが増えてきたら、同じ画面の検索でしぼれます。
+  </p>
+</div>
 
 <div class="shots">
   <figure>
@@ -179,7 +253,7 @@
   </p>
 </div>
 <p>
-  隠している件数は一覧の下に出ます。押すとミュートの設定に飛べます。
+  隠している件数は一覧の下に出ます。押すと設定が開くので、そこから「ミュート」へ進めます。
 </p>
 
 <div class="shots">
@@ -199,9 +273,12 @@
   「ファイル」アプリから開けますし、アプリを消したあとも残ります。
 </p>
 <p>
-  設定からは、いつでも<strong>書き出し</strong>（送り先はご自身で選びます）と、
+  控えは<strong>直近8回ぶん</strong>を残し、古いものから消えていきます。
+</p>
+<p>
+  <strong>設定 → データ</strong>からは、いつでも<strong>書き出し</strong>（送り先はご自身で選びます）と、
   <strong>読み込み</strong>ができます。読み込みでは、すでにある URL は飛ばして、無いものだけ足します。
-  上書きはしません。
+  上書きはしません。同じ画面に、自動の控えを最後に取った日付も出ます。
 </p>
 
 <h2 id="lock">7. のぞき見を防ぐ</h2>
@@ -245,6 +322,27 @@
   同じ場所にアプリのバージョンも出るので、お問い合わせのときはこれをお知らせください。
 </p>
 
+<h2 id="widget">ホーム画面から思い出す</h2>
+<p>
+  ホーム画面にウィジェットを置くと、<strong>未読の件数</strong>が出ます。
+  小さいサイズは1件、中くらいのサイズは3件まで、直近のタイトルも並びます。
+  押すとアプリが開きます。
+</p>
+<p>
+  <strong>アプリのロックをオンにしているあいだは、件数だけを出します。</strong>
+  タイトルもサイト名もウィジェットには出しません。
+  ホーム画面は鍵を掛けずに人目に触れるためです。
+</p>
+
+<h2 id="shortcuts">ショートカットから使う</h2>
+<ul>
+  <li><strong>ブックマークを保存</strong> — URL を渡すと保存します。タイトルは次にアプリを開いたときに埋まります。</li>
+  <li><strong>ブックマークを検索</strong> — タイトル・URL・タグ・メモ・本文から探します。<strong>ミュートしたものは返しません</strong>（一覧に出ないものがショートカットから出てきては、隠した意味がなくなるためです）。</li>
+</ul>
+<p>
+  ショートカットアプリの「App」から Kakesu を選ぶと出てきます。オートメーションにも組み込めます。
+</p>
+
 <h2 id="sync">別の端末で続きを読む</h2>
 <p>
   同じ Apple アカウントでサインインしていれば、そのまま出てきます。
@@ -267,6 +365,7 @@
 
 </div>
 
+<!--chrome:foot-->
 <footer class="site-footer">
   <div class="inner">
     <nav>
@@ -280,5 +379,6 @@
     <p class="copy">© 2026 Toru Fukui</p>
   </div>
 </footer>
+<!--/chrome:foot-->
 </body>
 </html>
