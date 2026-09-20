@@ -4,6 +4,7 @@
   --accent: #1965ac;
   --accent-soft: #e8f0f8;
   --accent-ink: #175a94;
+  --on-accent: #ffffff;
   --unread: #bc6b46;
   --bg: #efe9de;
   --card: #ffffff;
@@ -17,6 +18,7 @@
     --accent: #6aaee8;
     --accent-soft: #1c2a36;
     --accent-ink: #9cc9f0;
+    --on-accent: #10161c;
     --unread: #d9906b;
     --bg: #161412;
     --card: #1f1d1a;
@@ -334,19 +336,20 @@ code {
   background: var(--card);
 }
 
-/* 公開したら App Store バッジに差し替える置き場。
-   **押せないので瑠璃を使わない**（瑠璃＝操作できるもの） */
+/* App Store への導線。押せるので瑠璃（瑠璃＝操作できるもの）。
+   公式バッジ画像に差し替えるときは、a の中身を img にして padding を外す */
 .cta { text-align: center; margin: 1.75rem 0 0; }
-.cta-soon {
+.cta-store {
   display: inline-block;
-  border: 1px solid var(--line);
   border-radius: 999px;
-  padding: .5rem 1.3rem;
-  background: var(--card);
-  color: var(--ink2);
-  font-size: .95rem;
+  padding: .6rem 1.6rem;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 1rem;
   font-weight: 600;
+  text-decoration: none;
 }
+.cta-store:hover { background: var(--accent-ink); }
 
 /* カードは2列。1列に積むと4枚とも同じ重さに見える */
 .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0; }
