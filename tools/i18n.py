@@ -21,22 +21,23 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://fukuidinotech.github.io/kakesu-lp/"
 
-# ja は repo 直下。既に公開済みの URL を変えないため、ja だけサブディレクトリを持たない
+# en は repo 直下、ほかは同名のサブディレクトリ（2026-10-25 に直下を ja から en に替えた）。
+# 旧 en/ は出荷済みアプリとストアが開くので転送ページとして残している（このスクリプトは触らない）
 PAGES = ["index.html", "features.html", "guide.html",
          "terms.html", "privacy.html", "contact.html"]
 
 LANGS = {
-    "ja": {
-        "dir": "", "native": "日本語",
-        "nav": ["ホーム", "機能", "使い方", "お問い合わせ"],
-        "foot": ["ホーム", "機能一覧", "使い方", "利用規約", "プライバシーポリシー", "お問い合わせ"],
-        "pick": "言語を選ぶ",
-    },
     "en": {
-        "dir": "en", "native": "English",
+        "dir": "", "native": "English",
         "nav": ["Home", "Features", "Guide", "Contact"],
         "foot": ["Home", "Features", "Guide", "Terms", "Privacy", "Contact"],
         "pick": "Choose a language",
+    },
+    "ja": {
+        "dir": "ja", "native": "日本語",
+        "nav": ["ホーム", "機能", "使い方", "お問い合わせ"],
+        "foot": ["ホーム", "機能一覧", "使い方", "利用規約", "プライバシーポリシー", "お問い合わせ"],
+        "pick": "言語を選ぶ",
     },
     "de": {
         "dir": "de", "native": "Deutsch",

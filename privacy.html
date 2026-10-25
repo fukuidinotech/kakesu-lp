@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プライバシーポリシー — Kakesu</title>
-<meta name="description" content="Kakesu のプライバシーポリシー。開発者は利用者のデータを収集しません。">
+<title>Privacy Policy — Kakesu</title>
+<meta name="description" content="The Kakesu privacy policy. The developer collects no user data.">
 <!--chrome:alt-->
 <link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
-<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
-<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/en/privacy.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/ja/privacy.html">
 <link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/privacy.html">
 <link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/privacy.html">
 <link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/privacy.html">
 <link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/privacy.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/privacy.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/privacy.html">
-<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/en/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
 <link rel="icon" href="icon-512.png">
 <link rel="apple-touch-icon" href="icon-512.png">
 <link rel="stylesheet" href="style.css?v=232f51ad">
@@ -30,16 +30,16 @@
       Kakesu
     </a>
     <nav>
-      <a href="index.html">ホーム</a>
-      <a href="features.html">機能</a>
-      <a href="guide.html">使い方</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <details class="langpick">
-      <summary aria-label="言語を選ぶ">日本語</summary>
+      <summary aria-label="Choose a language">English</summary>
       <ul>
-        <li><a lang="ja" hreflang="ja" href="privacy.html" aria-current="true">日本語</a></li>
-        <li><a lang="en" hreflang="en" href="en/privacy.html">English</a></li>
+        <li><a lang="en" hreflang="en" href="privacy.html" aria-current="true">English</a></li>
+        <li><a lang="ja" hreflang="ja" href="ja/privacy.html">日本語</a></li>
         <li><a lang="de" hreflang="de" href="de/privacy.html">Deutsch</a></li>
         <li><a lang="fr" hreflang="fr" href="fr/privacy.html">Français</a></li>
         <li><a lang="es" hreflang="es" href="es/privacy.html">Español</a></li>
@@ -55,157 +55,155 @@
 <div class="wrap">
 
 <header class="page-header">
-  <h1>プライバシーポリシー</h1>
+  <h1>Privacy Policy</h1>
 </header>
 
-<h2>まとめ</h2>
+<h2>In short</h2>
 <p>
-<strong>開発者は、利用者のデータを一切収集しません。</strong>
-Kakesu には開発者のサーバーがありません。広告も、解析ツールも、外部の SDK も入っていません。
+<strong>The developer collects no user data whatsoever.</strong>
+Kakesu has no developer-run server. There are no ads, no analytics tools, and no third-party SDKs in it.
 </p>
 
-<h2>アプリが保存するもの</h2>
+<h2>What the app stores</h2>
 <p>
-保存した URL、タイトル、タグ、メモ、未読やお気に入りの状態、アプリの設定です。
-あわせて、検索で掘り出せるようにするため、
-<strong>保存したページの本文の冒頭（最大 4,000 文字）</strong>も保存します。
-これらは<strong>お客様の端末内</strong>と、<strong>お客様ご自身の iCloud</strong>
-（CloudKit のプライベートデータベース）に保存されます。
+The URLs you save, along with titles, tags, notes, unread and favorite state, and app settings.
+So that search can dig them back out, it also stores
+<strong>the start of the saved page's text (up to 4,000 characters)</strong>.
+These are held <strong>on your device</strong> and in <strong>your own iCloud</strong>
+(a CloudKit private database).
 </p>
 <p>
-このプライベートデータベースには Apple の仕組み上、開発者はアクセスできません。
-開発者が中身を見ることも、取り出すことも、第三者に渡すこともありません。
+By Apple's design, the developer cannot reach that private database.
+The developer cannot read its contents, extract them, or pass them to anyone else.
 </p>
 
-<h2>アプリが行う通信</h2>
+<h2>What the app connects to</h2>
 <p>
-Kakesu が通信するのは、次の場合だけです。
+Kakesu makes a network connection only in these cases.
 </p>
 <ul>
   <li>
-    <strong>保存したページの情報を取りに行くとき。</strong>
-    タイトル・サムネイル画像・ファビコンと、検索用の本文を取得するため、
-    <strong>保存したページのサーバーへ直接</strong>アクセスします。
-    この通信は開発者を経由しません。ただし、
-    <strong>アクセスした記録は、そのサイトの運営者側に残る場合があります</strong>
-    （通常のブラウザでページを開いたときと同じです）。
+    <strong>Fetching information about a page you saved.</strong>
+    To get the title, thumbnail image, favicon, and the text used for search, it reaches
+    <strong>the server of the saved page directly</strong>.
+    This does not pass through the developer. Note, however, that
+    <strong>a record of the access may remain with the operator of that site</strong>
+    (just as it would if you had opened the page in an ordinary browser).
   </li>
   <li>
-    <strong>iCloud との同期・控えの保存。</strong>
-    Apple の iCloud に対して行われます。
-    取り扱いは
-    <a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>によります。
+    <strong>iCloud sync and backups.</strong>
+    Made to Apple's iCloud. Handling is governed by
+    <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.
   </li>
 </ul>
 <p>
-アプリ内でページを開く機能は Apple の SFSafariViewController を使っています。
-既定ではリーダー表示で開きますが、これも同じ仕組みの中で行われます。
-このとき Cookie や閲覧履歴は Safari と分離され、開発者は内容を取得できません。
+Opening a page inside the app uses Apple's SFSafariViewController.
+It opens in Reader by default, which happens within that same mechanism.
+Cookies and browsing history are kept separate from Safari, and the developer cannot obtain the contents.
 </p>
 
-<h2>iCloud Drive の控え</h2>
+<h2>The iCloud Drive backup</h2>
 <p>
-週に一度、保存した全件を JSON ファイルにして、お客様の iCloud Drive
-（「ファイル」アプリの Kakesu フォルダ）に置きます。
-これはお客様が読める場所に置くための控えであり、開発者には送られません。
+Once a week, everything you have saved is written as a JSON file into your iCloud Drive
+(the Kakesu folder in the Files app).
+It is a copy placed somewhere you can read it; it is not sent to the developer.
 </p>
 
-<h2>広告・解析・トラッキング</h2>
+<h2>Ads, analytics, tracking</h2>
 <p>
-ありません。広告は表示しません。アプリ内課金もありません。
-利用状況を測る解析ツールも入れていません。
-App Tracking Transparency の許可を求めることもありません。
+None. No ads are shown. There are no in-app purchases.
+No analytics tool measuring usage is included.
+You will never be asked for App Tracking Transparency permission.
 </p>
 
-<h2>「聞く」（Apple Intelligence）</h2>
+<h2>“Ask” (Apple Intelligence)</h2>
 <p>
-対応する端末では、貯めたブックマークについてアプリに質問できます。
-この機能は <strong>iOS の端末内モデル（Apple Intelligence）だけで動きます。</strong>
-質問も回答も、開発者のサーバーにも外部のサーバーにも送りません。
+On supported devices you can put questions to the app about the bookmarks you have collected.
+This feature <strong>runs solely on the on-device model in iOS (Apple Intelligence).</strong>
+Neither questions nor answers are sent to a developer server or to any external server.
 </p>
 <p>
-モデルに渡すのは、質問に近いものを最大6件まで絞り込んだうえで、
-タイトル・タグ・メモ・サイトのホスト名・未読かどうかの5つです。
-あわせて、件数・よく使うタグ・よく保存するサイトといった<strong>集計した数字</strong>を渡します。
-<strong>URL の全文は渡しません。</strong>
+What is handed to the model, after narrowing to at most six items closest to the question,
+is five things: title, tags, note, the site's host name, and whether it is unread.
+Alongside that go <strong>aggregate figures</strong> such as counts, your most-used tags,
+and the sites you save from most. <strong>Full URLs are never handed over.</strong>
 </p>
 <p>
-続けて聞いたときは、<strong>それまでのやり取り（質問と回答）も同じモデルに渡します。</strong>
-話のつながりを保つためで、渡すのは直近の数組だけです。これも端末の外へは出ません。
-貯めたブックマーク全体への質問は、端末にも保存しません。
-「新しい会話」を押すか、画面を閉じれば消えます。
+When you ask a follow-up, <strong>the exchange so far (questions and answers) goes to the same model too.</strong>
+This keeps the thread of the conversation; only the last few pairs are passed. This too never leaves the device.
+Questions about your collection as a whole are not stored on the device either.
+Tap “New conversation”, or close the screen, and they are gone.
 </p>
 <p>
-<strong>記事1本の要約では、そのページの本文（冒頭のみ）を端末内モデルに渡します。</strong>
-根拠にするのはその1本の本文だけで、ほかに貯めたものは混ぜません。
-この場合も、本文が端末の外へ出ることはありません。
+<strong>For the summary of a single article, that page's text (the beginning only) is handed to the on-device model.</strong>
+The only thing it rests on is that one article's text; nothing else you saved is mixed in.
+Here too, the text never leaves the device.
 </p>
 <p>
-<strong>記事1本についての会話だけは、新しいものから5件までお客様の端末に残ります。</strong>
-あとで同じ記事を開いたときに続きから聞けるようにするためです。
-<strong>iCloud には送りません。</strong>開発者にも外部のサーバーにも送りません。
-「聞く」の画面から開く「記事の会話」で、1件ずつ、または「すべて消す」でまとめて消せます。
-要約の画面からは、その記事の会話だけを消せます。
-アプリを削除すれば端末ごと消えます。
+<strong>Conversations about a single article are the one thing kept on your device — the five most recent.</strong>
+This is so you can pick up where you left off when you open the same article again.
+<strong>They are not sent to iCloud</strong>, nor to the developer, nor to any external server.
+Delete them from “Article Conversations”, reached from the Ask screen, one at a time or all at once with “Delete All”.
+From the summary screen you can delete just that article's conversation.
+Deleting the app removes them with it.
 </p>
 <p>
-Apple Intelligence に対応した端末で、iOS の設定から有効にしている場合にだけ使えます。
-対応していない端末では、入口そのものが出ません。
+The feature is available only on devices that support Apple Intelligence, with it enabled in iOS Settings.
+On other devices the entry point does not appear at all.
 </p>
 
 <h2>Face ID / Touch ID</h2>
 <p>
-アプリのロックを有効にした場合、開くときに Face ID / Touch ID、
-または端末のパスコードで本人確認を行います。
+With App Lock enabled, opening the app verifies you with Face ID / Touch ID,
+or your device passcode.
 </p>
 <p>
-<strong>顔や指紋のデータは、iOS が端末内で扱います。</strong>
-本アプリはそれらを取得しません。開発者に送られることもありません。
-本アプリが受け取るのは「確認が通ったかどうか」だけです。
+<strong>Face and fingerprint data are handled by iOS, on the device.</strong>
+This app does not obtain them. They are never sent to the developer.
+All this app receives is whether the check passed.
 </p>
 <p>
-アプリのロックを有効にしているあいだは、<strong>ホーム画面のウィジェットにも
-タイトルやサイト名を出しません</strong>（未読の件数だけになります）。
-ホーム画面は鍵を掛けずに人目に触れるためです。
+While App Lock is enabled, <strong>the Home Screen widget shows no titles and no site names</strong>
+either (only the unread count).
+The Home Screen is on show without a lock in front of it.
 </p>
 
-<h2>クラッシュ情報</h2>
+<h2>Crash information</h2>
 <p>
-お客様が iOS の設定で「App デベロッパと共有」を有効にしている場合に限り、
-Apple から匿名のクラッシュ情報が開発者に提供されることがあります。
-これは Apple の仕組みによるもので、Kakesu が独自に送信しているものではありません。
-この情報に、保存した URL やメモは含まれません。
+Only if you have enabled “Share with App Developers” in iOS Settings may Apple provide
+anonymous crash information to the developer.
+This is Apple's mechanism, not something Kakesu sends of its own accord.
+That information contains none of the URLs or notes you saved.
 </p>
 
-<h2>お子様の利用について</h2>
+<h2>Use by children</h2>
 <p>
-Kakesu は特定の年齢層に向けて作られたアプリではなく、
-お子様から個人情報を意図的に収集することもありません。
+Kakesu is not built for any particular age group,
+and it does not knowingly collect personal information from children.
 </p>
 
-<h2>データの削除</h2>
+<h2>Deleting your data</h2>
 <ul>
-  <li>端末内のデータは、アプリを削除すると消えます。</li>
-  <li>iCloud に同期された分は、iOS の「設定」→ Apple アカウント → iCloud から削除できます。</li>
-  <li>iCloud Drive の控えは、「ファイル」アプリで削除できます。</li>
+  <li>Data on the device is removed when you delete the app.</li>
+  <li>What has synced to iCloud can be deleted under iOS Settings → Apple Account → iCloud.</li>
+  <li>The iCloud Drive backups can be deleted in the Files app.</li>
 </ul>
 
-<h2>ポリシーの変更</h2>
+<h2>Changes to this policy</h2>
 <p>
-内容を変更した場合は、このページを更新し、下部の最終更新日を書き換えます。
+If the contents change, this page is updated and the date at the bottom is rewritten.
 </p>
 
-<h2>お問い合わせ</h2>
+<h2>Contact</h2>
 <p>
-この方針について責任を負うのは、本アプリの開発者である <strong>Toru Fukui</strong> です。
-ご連絡は下記へお願いします。
+The party responsible for this policy — the data controller — is <strong>Toru Fukui</strong>,
+the developer of this app. Please get in touch at the address below.
 </p>
 <p>
 <a href="mailto:fukuidinotech@gmail.com">fukuidinotech@gmail.com</a>
 </p>
 
-
-<p class="updated">最終更新日: 2026年9月11日</p>
+<p class="updated">Last updated: 11 September 2026</p>
 
 </div>
 
@@ -213,12 +211,12 @@ Kakesu は特定の年齢層に向けて作られたアプリではなく、
 <footer class="site-footer">
   <div class="inner">
     <nav>
-      <a href="index.html">ホーム</a>
-      <a href="features.html">機能一覧</a>
-      <a href="guide.html">使い方</a>
-      <a href="terms.html">利用規約</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-      <a href="contact.html">お問い合わせ</a>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <p class="copy">© 2026 Toru Fukui</p>
   </div>

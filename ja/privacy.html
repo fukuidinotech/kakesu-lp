@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー — Kakesu</title>
+<meta name="description" content="Kakesu のプライバシーポリシー。開発者は利用者のデータを収集しません。">
+<!--chrome:alt-->
+<link rel="canonical" href="https://fukuidinotech.github.io/kakesu-lp/ja/privacy.html">
+<link rel="alternate" hreflang="en" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
+<link rel="alternate" hreflang="ja" href="https://fukuidinotech.github.io/kakesu-lp/ja/privacy.html">
+<link rel="alternate" hreflang="de" href="https://fukuidinotech.github.io/kakesu-lp/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://fukuidinotech.github.io/kakesu-lp/fr/privacy.html">
+<link rel="alternate" hreflang="es" href="https://fukuidinotech.github.io/kakesu-lp/es/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://fukuidinotech.github.io/kakesu-lp/ko/privacy.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hans/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://fukuidinotech.github.io/kakesu-lp/zh-Hant/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://fukuidinotech.github.io/kakesu-lp/privacy.html">
+<link rel="icon" href="../icon-512.png">
+<link rel="apple-touch-icon" href="../icon-512.png">
+<link rel="stylesheet" href="../style.css?v=232f51ad">
+<!--/chrome:alt-->
+</head>
+<body>
+<!--chrome:head-->
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html">
+      <img src="../icon-512.png" width="28" height="28" alt="">
+      Kakesu
+    </a>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="features.html">機能</a>
+      <a href="guide.html">使い方</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <details class="langpick">
+      <summary aria-label="言語を選ぶ">日本語</summary>
+      <ul>
+        <li><a lang="en" hreflang="en" href="../privacy.html">English</a></li>
+        <li><a lang="ja" hreflang="ja" href="privacy.html" aria-current="true">日本語</a></li>
+        <li><a lang="de" hreflang="de" href="../de/privacy.html">Deutsch</a></li>
+        <li><a lang="fr" hreflang="fr" href="../fr/privacy.html">Français</a></li>
+        <li><a lang="es" hreflang="es" href="../es/privacy.html">Español</a></li>
+        <li><a lang="ko" hreflang="ko" href="../ko/privacy.html">한국어</a></li>
+        <li><a lang="zh-Hans" hreflang="zh-Hans" href="../zh-Hans/privacy.html">简体中文</a></li>
+        <li><a lang="zh-Hant" hreflang="zh-Hant" href="../zh-Hant/privacy.html">繁體中文</a></li>
+      </ul>
+    </details>
+  </div>
+</header>
+<!--/chrome:head-->
+
+<div class="wrap">
+
+<header class="page-header">
+  <h1>プライバシーポリシー</h1>
+</header>
+
+<h2>まとめ</h2>
+<p>
+<strong>開発者は、利用者のデータを一切収集しません。</strong>
+Kakesu には開発者のサーバーがありません。広告も、解析ツールも、外部の SDK も入っていません。
+</p>
+
+<h2>アプリが保存するもの</h2>
+<p>
+保存した URL、タイトル、タグ、メモ、未読やお気に入りの状態、アプリの設定です。
+あわせて、検索で掘り出せるようにするため、
+<strong>保存したページの本文の冒頭（最大 4,000 文字）</strong>も保存します。
+これらは<strong>お客様の端末内</strong>と、<strong>お客様ご自身の iCloud</strong>
+（CloudKit のプライベートデータベース）に保存されます。
+</p>
+<p>
+このプライベートデータベースには Apple の仕組み上、開発者はアクセスできません。
+開発者が中身を見ることも、取り出すことも、第三者に渡すこともありません。
+</p>
+
+<h2>アプリが行う通信</h2>
+<p>
+Kakesu が通信するのは、次の場合だけです。
+</p>
+<ul>
+  <li>
+    <strong>保存したページの情報を取りに行くとき。</strong>
+    タイトル・サムネイル画像・ファビコンと、検索用の本文を取得するため、
+    <strong>保存したページのサーバーへ直接</strong>アクセスします。
+    この通信は開発者を経由しません。ただし、
+    <strong>アクセスした記録は、そのサイトの運営者側に残る場合があります</strong>
+    （通常のブラウザでページを開いたときと同じです）。
+  </li>
+  <li>
+    <strong>iCloud との同期・控えの保存。</strong>
+    Apple の iCloud に対して行われます。
+    取り扱いは
+    <a href="https://www.apple.com/legal/privacy/">Apple のプライバシーポリシー</a>によります。
+  </li>
+</ul>
+<p>
+アプリ内でページを開く機能は Apple の SFSafariViewController を使っています。
+既定ではリーダー表示で開きますが、これも同じ仕組みの中で行われます。
+このとき Cookie や閲覧履歴は Safari と分離され、開発者は内容を取得できません。
+</p>
+
+<h2>iCloud Drive の控え</h2>
+<p>
+週に一度、保存した全件を JSON ファイルにして、お客様の iCloud Drive
+（「ファイル」アプリの Kakesu フォルダ）に置きます。
+これはお客様が読める場所に置くための控えであり、開発者には送られません。
+</p>
+
+<h2>広告・解析・トラッキング</h2>
+<p>
+ありません。広告は表示しません。アプリ内課金もありません。
+利用状況を測る解析ツールも入れていません。
+App Tracking Transparency の許可を求めることもありません。
+</p>
+
+<h2>「聞く」（Apple Intelligence）</h2>
+<p>
+対応する端末では、貯めたブックマークについてアプリに質問できます。
+この機能は <strong>iOS の端末内モデル（Apple Intelligence）だけで動きます。</strong>
+質問も回答も、開発者のサーバーにも外部のサーバーにも送りません。
+</p>
+<p>
+モデルに渡すのは、質問に近いものを最大6件まで絞り込んだうえで、
+タイトル・タグ・メモ・サイトのホスト名・未読かどうかの5つです。
+あわせて、件数・よく使うタグ・よく保存するサイトといった<strong>集計した数字</strong>を渡します。
+<strong>URL の全文は渡しません。</strong>
+</p>
+<p>
+続けて聞いたときは、<strong>それまでのやり取り（質問と回答）も同じモデルに渡します。</strong>
+話のつながりを保つためで、渡すのは直近の数組だけです。これも端末の外へは出ません。
+貯めたブックマーク全体への質問は、端末にも保存しません。
+「新しい会話」を押すか、画面を閉じれば消えます。
+</p>
+<p>
+<strong>記事1本の要約では、そのページの本文（冒頭のみ）を端末内モデルに渡します。</strong>
+根拠にするのはその1本の本文だけで、ほかに貯めたものは混ぜません。
+この場合も、本文が端末の外へ出ることはありません。
+</p>
+<p>
+<strong>記事1本についての会話だけは、新しいものから5件までお客様の端末に残ります。</strong>
+あとで同じ記事を開いたときに続きから聞けるようにするためです。
+<strong>iCloud には送りません。</strong>開発者にも外部のサーバーにも送りません。
+「聞く」の画面から開く「記事の会話」で、1件ずつ、または「すべて消す」でまとめて消せます。
+要約の画面からは、その記事の会話だけを消せます。
+アプリを削除すれば端末ごと消えます。
+</p>
+<p>
+Apple Intelligence に対応した端末で、iOS の設定から有効にしている場合にだけ使えます。
+対応していない端末では、入口そのものが出ません。
+</p>
+
+<h2>Face ID / Touch ID</h2>
+<p>
+アプリのロックを有効にした場合、開くときに Face ID / Touch ID、
+または端末のパスコードで本人確認を行います。
+</p>
+<p>
+<strong>顔や指紋のデータは、iOS が端末内で扱います。</strong>
+本アプリはそれらを取得しません。開発者に送られることもありません。
+本アプリが受け取るのは「確認が通ったかどうか」だけです。
+</p>
+<p>
+アプリのロックを有効にしているあいだは、<strong>ホーム画面のウィジェットにも
+タイトルやサイト名を出しません</strong>（未読の件数だけになります）。
+ホーム画面は鍵を掛けずに人目に触れるためです。
+</p>
+
+<h2>クラッシュ情報</h2>
+<p>
+お客様が iOS の設定で「App デベロッパと共有」を有効にしている場合に限り、
+Apple から匿名のクラッシュ情報が開発者に提供されることがあります。
+これは Apple の仕組みによるもので、Kakesu が独自に送信しているものではありません。
+この情報に、保存した URL やメモは含まれません。
+</p>
+
+<h2>お子様の利用について</h2>
+<p>
+Kakesu は特定の年齢層に向けて作られたアプリではなく、
+お子様から個人情報を意図的に収集することもありません。
+</p>
+
+<h2>データの削除</h2>
+<ul>
+  <li>端末内のデータは、アプリを削除すると消えます。</li>
+  <li>iCloud に同期された分は、iOS の「設定」→ Apple アカウント → iCloud から削除できます。</li>
+  <li>iCloud Drive の控えは、「ファイル」アプリで削除できます。</li>
+</ul>
+
+<h2>ポリシーの変更</h2>
+<p>
+内容を変更した場合は、このページを更新し、下部の最終更新日を書き換えます。
+</p>
+
+<h2>お問い合わせ</h2>
+<p>
+この方針について責任を負うのは、本アプリの開発者である <strong>Toru Fukui</strong> です。
+ご連絡は下記へお願いします。
+</p>
+<p>
+<a href="mailto:fukuidinotech@gmail.com">fukuidinotech@gmail.com</a>
+</p>
+
+
+<p class="updated">最終更新日: 2026年9月11日</p>
+
+</div>
+
+<!--chrome:foot-->
+<footer class="site-footer">
+  <div class="inner">
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="features.html">機能一覧</a>
+      <a href="guide.html">使い方</a>
+      <a href="terms.html">利用規約</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <p class="copy">© 2026 Toru Fukui</p>
+  </div>
+</footer>
+<!--/chrome:foot-->
+</body>
+</html>
