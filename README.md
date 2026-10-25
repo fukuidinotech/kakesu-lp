@@ -7,6 +7,12 @@
 <p align="center">A bookmark app for tossing in pages you want to keep and digging them back out later. This is the public website for the iOS app Kakesu.</p>
 
 <p align="center">
+  <a href="https://apps.apple.com/app/id6810961648">
+    <img src="https://toolbox.marketingtools.apple.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" alt="Download on the App Store" height="44">
+  </a>
+</p>
+
+<p align="center">
   <a href="https://fukuidinotech.github.io/kakesu-lp/">https://fukuidinotech.github.io/kakesu-lp/</a>
 </p>
 
