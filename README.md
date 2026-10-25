@@ -11,6 +11,8 @@
 </p>
 
 <p align="center">
+  <a href="https://fukuidinotech.github.io/kakesu-lp/">日本語</a>
+  ·
   <a href="https://fukuidinotech.github.io/kakesu-lp/en/">English</a>
   ·
   <a href="https://fukuidinotech.github.io/kakesu-lp/de/">Deutsch</a>
